@@ -1,0 +1,30 @@
+// COLORS
+$primary:#8c0000;
+$secondary:#a94c00;
+$font-bold:#fff;
+$font:#eee;
+$background:#090909;
+
+// FONTS
+$font-reg:"opensans-regular";
+$font-bold:"opensans-bold";
+
+// MAIN
+body{
+  font-size: 100%;
+  color:$font;
+  background: $background;
+  font-family: $font-reg;
+}
+.hidden{
+  display: none;
+}
+.clearfix:after{
+  content:'';
+  display: block;
+  width:0;
+  height:0;
+  opacity: 0.0;
+  visibility: hidden;
+  clear: both;
+}
