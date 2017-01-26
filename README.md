@@ -1,3 +1,3 @@
 # 72-Summit-Series
 
-## Website by Quinn Kennedy and Nicholas Ireland
+Repository for all files related to the Team Canada 72 Summit Series Website Upgrade 
