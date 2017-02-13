@@ -1,0 +1,4 @@
+<p>
+  PARTNERSHIPS
+  <!-- EDIT THIS FILE FOR PARTNERSHIPS -->
+</p>

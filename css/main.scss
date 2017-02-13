@@ -28,3 +28,24 @@ body{
   visibility: hidden;
   clear: both;
 }
+
+#mainNav{
+  ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+    display: block;
+    li{
+      display: block;
+      a{
+        display: block;
+        padding:1em;
+        color:#222;
+        background: #eee;
+        &.current{
+          color:#f00;
+        }
+      }
+    }
+  }
+}

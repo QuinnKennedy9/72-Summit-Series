@@ -1,0 +1,32 @@
+body {
+  font-size: 100%;
+  color: #eee;
+  background: #090909;
+  font-family: "opensans-regular"; }
+
+.hidden {
+  display: none; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  opacity: 0.0;
+  visibility: hidden;
+  clear: both; }
+
+#mainNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block; }
+  #mainNav ul li {
+    display: block; }
+    #mainNav ul li a {
+      display: block;
+      padding: 1em;
+      color: #222;
+      background: #eee; }
+      #mainNav ul li a.current {
+        color: #f00; }
