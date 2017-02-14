@@ -9,6 +9,9 @@ function pageSwap(event){
   event.preventDefault();
   var it = event.currentTarget;
   try{
+  document.querySelector('main').innerHTML = "";
+  document.querySelector('#loading').style.display ="block";
+  document.querySelector('#mainNav ul').classList.add('hidden');
   var link = it.getAttribute('href');
   var pageTitle = link;
   // console.log("clicked " + link);
@@ -21,6 +24,7 @@ function pageSwap(event){
         // console.log(response);
         // return response;
         insertPage(response, pageTitle);
+        document.querySelector('#loading').style.display ="none";
         currentLink.classList.remove('current');
         it.classList.add('current');
         currentLink=it;
