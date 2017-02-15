@@ -1,11 +1,11 @@
 <!doctype html>
 <html>
-<?php $page="home"; ?>
-<?php @require "includes/templates/doctop.php"; ?>
-<?php @require "includes/templates/header.php"; ?>
-<main>
-  <?php @require "includes/pages/".$page.".php"; ?>
-</main>
-<?php @require "includes/templates/footer.php"; ?>
-<?php @require "includes/templates/docbot.php"; ?>
+<head>
+  <script>
+  window.location.replace(window.location + "home");// = "/home";
+  </script>
+</head>
+<body>
+  <!-- Loads home.php instead of index.php, via redirect -->
+</body>
 </html>

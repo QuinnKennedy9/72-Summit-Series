@@ -6,6 +6,7 @@
     // console.log(link);
     previousPage = window.location.pathname;
     window.history.pushState({"page":pageTitle},"page", pageTitle);
+    //add conditonal to append home on index page
     // window.history.pushState("string","page", previousPage);
   }
   // window.onpopstate = function(){
