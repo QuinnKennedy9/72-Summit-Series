@@ -6,7 +6,7 @@ body {
 
 .hidden {
   display: none !important; }
-}
+
 .clearfix:after {
   content: '';
   display: block;
@@ -39,58 +39,96 @@ body {
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 2;
-  background: #fff; }
+  z-index: 102;
+  background: #ffffff; }
+  #mainNav .logo {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 3.5em;
+    height: 3.5em;
+    z-index: 104; }
+  #mainNav .left {
+    z-index: 101;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5em;
+    height: 5.5em;
+    content: '';
+    background: #fff; }
+    #mainNav .left:after {
+      background: inherit;
+      content: '';
+      width: 6em;
+      height: 6em;
+      position: absolute;
+      top: -1.8em;
+      right: -3em;
+      transform: rotate(45deg);
+      transform-origin: 50% 50%; }
+  #mainNav .right {
+    position: absolute;
+    top: 3.5em;
+    left: 0;
+    z-index: 100;
+    height: 1em;
+    content: '';
+    background: #aa0e0e;
+    width: 100%; }
   #mainNav h2 {
     display: block;
     float: left;
     color: #222;
     margin-left: 0.5em; }
   #mainNav a.hamburger {
+    padding: 1em;
     text-decoration: none;
     color: inherit;
-    margin: 1em;
     float: right;
-    display: block;
-    position: relative;
-    width: 2.5em;
-    height: 2em; }
-    #mainNav a.hamburger .top {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: #222;
-      width: 100%;
-      height: 15%; }
-    #mainNav a.hamburger .mid {
-      position: absolute;
-      top: 40%;
-      transform-origin: 25% 25%;
-      background: #222;
-      width: 100%;
-      height: 15%; }
-    #mainNav a.hamburger .bot {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background: #222;
-      width: 100%;
-      height: 15%; }
+    display: block; }
+    #mainNav a.hamburger div {
+      position: relative;
+      width: 2.5em;
+      height: 1.5em; }
+      #mainNav a.hamburger div .top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #cc1515;
+        width: 100%;
+        height: 15%; }
+      #mainNav a.hamburger div .mid {
+        position: absolute;
+        top: 40%;
+        transform-origin: 25% 25%;
+        background: #cc1515;
+        width: 100%;
+        height: 15%; }
+      #mainNav a.hamburger div .bot {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #cc1515;
+        width: 100%;
+        height: 15%; }
   #mainNav ul {
+    background: #eee;
     clear: both;
     display: block;
     list-style: none;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    padding-top: 2em;
+    z-index: 99; }
     #mainNav ul li {
       display: block; }
       #mainNav ul li a {
         display: block;
         padding: 1em;
-        color: #222;
-        background: #eee; }
+        color: #222; }
         #mainNav ul li a.current {
           color: #f00; }
 
 main {
-  margin-top: 6em; }
+  margin-top: 7em; }

@@ -25,7 +25,9 @@ function pageSwap(event){
         // return response;
         insertPage(response, pageTitle);
         document.querySelector('#loading').style.display ="none";
-        currentLink.classList.remove('current');
+        if(currentLink!=null){
+          currentLink.classList.remove('current');
+        }
         it.classList.add('current');
         currentLink=it;
       }

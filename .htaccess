@@ -1,5 +1,8 @@
 RewriteEngine On
+ErrorDocument 404 /error.php?code=404
 RewriteCond %{REQUEST_FILENAME} !-f
 #RewriteRule ^([^\.]+)$ $1.html [NC,L]
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 RedirectMatch 301 ^/(.*)/index/?$ /$1/
+RewriteCond %{THE_REQUEST} !^[A-Z]{3,9}\ [a-zA-Z0-9\.\+_/\-\?\=\&]+\ HTTP/ [NC]
+RewriteRule .* - [F,NS,L]

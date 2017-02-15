@@ -1,10 +1,10 @@
 // COLORS
-$primary:#8c0000;
-$secondary:#a94c00;
+$red:#cc1515;
+$red-dark:#aa0e0e;
 $font-bold:#fff;
 $font:#eee;
 $background:#090909;
-$hamburger: #222;
+$hamburger: $red;
 
 // FONTS
 $font-reg:"opensans-regular";
@@ -55,8 +55,48 @@ body{
   width:100%;
   left:0;
   top:0;
-  z-index: 2;
-  background: #fff;
+  z-index: 102;
+  background: #ffffff;
+  .logo{
+    position: absolute;
+    top:1em;
+    left:1em;
+    width:3.5em;
+    height:3.5em;
+    z-index: 104;
+  }
+  .left{
+    z-index: 101;
+    position: absolute;
+    left:0;
+    top:0;
+    width:5em;
+    height:5.5em;
+    content:'';
+    background: #fff;
+    &:after{
+      background: inherit;
+      // background: #f00;
+      content:'';
+      width:6em;
+      height:6em;
+      position:absolute;
+      top: -1.8em;
+      right:-3em;
+      transform: rotate(45deg);
+      transform-origin: 50% 50%;
+    }
+  }
+  .right{
+    position: absolute;;
+    top:3.5em;
+    left:0;
+    z-index: 100;
+    height:1em;
+    content:'';
+    background: $red-dark;
+    width:100%;
+  }
   h2{
     display: block;
     float: left;
@@ -64,12 +104,15 @@ body{
     margin-left: 0.5em;
   }
   a.hamburger{
+    padding:1em;
     text-decoration: none;
     color:inherit;
-    margin:1em;
     float: right;
     display: block;
+  div{
     position: relative;
+    width:2.5em;
+    height:1.5em;
     .top{
       position: absolute;
       top:0;
@@ -94,23 +137,24 @@ body{
       width:100%;
       height:15%;
     }
-    width:2.5em;
-    height:2em;
   }
+}
   ul{
+    background: #eee;
     clear: both;
     // display: none;
     display: block;
     list-style: none;
     margin:0;
     padding:0;
+    padding-top: 2em;
+    z-index: 99;
     li{
       display: block;
       a{
         display: block;
         padding:1em;
         color:#222;
-        background: #eee;
         &.current{
           color:#f00;
         }
@@ -119,5 +163,5 @@ body{
   }
 }
 main{
-  margin-top:6em;
+  margin-top:7em;
 }
