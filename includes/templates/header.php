@@ -1,6 +1,7 @@
 <header>
 <nav id="mainNav">
   <h2 class="hidden">Main Navigation</h2>
+  <div class="bar clearfix">
   <img class="logo" src="img/logo.jpg">
   <a href="#" class="hamburger">
     <div>
@@ -12,6 +13,7 @@
     </div>
   </div>
   </a>
+</div>
   <ul class="hidden">
     <li><a href="home" class=<?php if($page==="home"){echo 'current';} ?>>Home</a></li>
     <li><a href="story" class=<?php if($page==="story"){echo 'current';} ?>>Story</a></li>

@@ -1,4 +1,6 @@
 <script src="js/classList.js"></script>
+<script src="js/CSSPlugin.js"></script>
+<script src="js/TweenLite.js"></script>
 <!-- the above is backfill for the absence of the classList attribute in IE8 & 9 -->
 <script src="js/main.js"></script>
 <script src="js/pageSwap.js"></script>

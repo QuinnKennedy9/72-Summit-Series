@@ -26,8 +26,11 @@ function pageSwapEvent(event){
 function pageSwap(link){
   try{
   document.querySelector('main').innerHTML = "";
-  document.querySelector('#loading').style.display ="block";
-  document.querySelector('#mainNav ul').classList.add('hidden');
+  // document.querySelector('#loading').style.display ="block";
+  var menu = document.querySelector('#mainNav ul'); //.classList.add('hidden');
+  TweenLite.fromTo(menu,0.5,{height:"40em",opacity:1.0},{height:"0em",opacity:0, onComplete:function(){
+    menu.classList.add('hidden');
+  }});
   var pageTitle = link;
   // console.log("clicked " + link);
   link = "../includes/pages/" + link + ".php";
@@ -43,6 +46,19 @@ function pageSwap(link){
       }
     };
     xhttp.open("GET",link,true);
+    xhttp.onprogress = function(pe) {
+      // console.log(pe.eventComputable);
+      if(pe.lengthComputable) {
+        // progressBar.max = pe.total;
+        console.log(pe.total + " TOTAL");
+        // progressBar.value = pe.loaded;
+        console.log(pe.loaded + " LOADED");
+      }
+    }
+  xhttp.onloadend = function(pe) {
+    // progressBar.value = pe.loaded;
+    console.log(pe.loaded);
+  }
     xhttp.send();
   }
   catch(e){
