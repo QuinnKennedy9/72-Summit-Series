@@ -1,86 +1,81 @@
 (function(){
-  var currentLink = null;
-  var previousPage = null;
-  function insertPage(page, pageTitle){
-    document.querySelector('main').innerHTML = page;
-    // console.log(link);
-    previousPage = window.location.pathname;
-    window.history.pushState({"page":pageTitle},"page", pageTitle);
-    //add conditonal to append home on index page
-    // window.history.pushState("string","page", previousPage);
+  var mobile = false; //used to check if mobile menu has been opened
+  var menuLinks = document.querySelectorAll('.ajax');
+  console.log("HELLO");
+  var mainContainer = document.querySelector("#pageContainer");
+  var hamburger = document.querySelector('.hamburger');
+  var defaultTitle = "Team Canada 1972";
+
+  function ajaxPage(pageObject){
+    var xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() {
+       if (this.readyState == 4 && this.status == 200) {
+        var response = this.responseText;
+        // console.log(response);
+        TweenLite.to(mainContainer,0.5,{opacity:0,onComplete:function(){
+          mainContainer.innerHTML = response;
+          TweenLite.to(mainContainer,0.5,{opacity:1});
+          assignLinks();
+        }})
+      }
+     };
+     xhttp.open("GET", pageObject.url , true);
+     xhttp.send();
   }
-  // window.onpopstate = function(){
-  //     pageSwap(previousPage);
-  // }
-function pageSwapEvent(event){
+
+function loadPage(event){
   event.preventDefault();
   var it = event.currentTarget;
-  var link = it.getAttribute('href');
-  pageSwap(link);
-  if(currentLink!=null){
-    currentLink.classList.remove('current');
-  }
-  it.classList.add('current');
-  currentLink=it;
-}
-function pageSwap(link){
-  try{
-  document.querySelector('main').innerHTML = "";
-  // document.querySelector('#loading').style.display ="block";
-  var menu = document.querySelector('#mainNav ul'); //.classList.add('hidden');
-  TweenLite.fromTo(menu,0.5,{height:"40em",opacity:1.0},{height:"0em",opacity:0, onComplete:function(){
-    menu.classList.add('hidden');
-  }});
-  var pageTitle = link;
-  // console.log("clicked " + link);
-  link = "../includes/pages/" + link + ".php";
-  var xhttp = new XMLHttpRequest();
-  var response = "";
-  xhttp.onreadystatechange = function(){
-    if(this.readyState == 4 && this.status == 200){
-        response = this.responseText;
-        // console.log(response);
-        // return response;
-        insertPage(response, pageTitle);
-        document.querySelector('#loading').style.display ="none";
-      }
-    };
-    xhttp.open("GET",link,true);
-    xhttp.onprogress = function(pe) {
-      // console.log(pe.eventComputable);
-      if(pe.lengthComputable) {
-        // progressBar.max = pe.total;
-        console.log(pe.total + " TOTAL");
-        // progressBar.value = pe.loaded;
-        console.log(pe.loaded + " LOADED");
-      }
-    }
-  xhttp.onloadend = function(pe) {
-    // progressBar.value = pe.loaded;
-    console.log(pe.loaded);
-  }
-    xhttp.send();
-  }
-  catch(e){
-    console.log("Error occured: " + e);
-  }
+  var pageSon = {name:it.getAttribute('href'), url:"pages/"+it.getAttribute('href')};
+  window.history.pushState(pageSon.url,null, pageSon.name);
+  document.title = defaultTitle + " | " + pageSon.name.substring(0,1).toUpperCase() + pageSon.name.substring(1);
+  ajaxPage(pageSon);
 }
 
-var mainNavLinks = document.querySelectorAll('#mainNav ul li a');
-var x=0;
-while(mainNavLinks[x]!=null){
-  if(mainNavLinks[x].classList.contains('current')){
-    currentLink = mainNavLinks[x];
-  }
-mainNavLinks[x].addEventListener('click',pageSwapEvent,false);
-x++;
-}
-window.addEventListener('popstate', function(event) {
-    if (event.state) {
-      var backURL = window.location.pathname.replace("/","");
-        // alert(backURL);
-        window.location = backURL;
-        // pageSwap(backURL);
+
+function assignLinks(){
+  menuLinks = null;
+  menuLinks = document.querySelectorAll('.ajax');
+  for(link of menuLinks){
+    // console.log(link);
+    link.addEventListener('click',loadPage,false);
+    if(link.classList.contains('menuLink')){
+      link.addEventListener('click',toggleMenu,false);
     }
-}, false);
+  }
+  console.log("assigned menuLinks");
+}
+
+
+window.addEventListener('popstate', function(e){
+  var state = e.state;
+  if (state == null) {
+    mainContainer.innerHTML = " ";
+    document.title = defaultTitle;
+  } else {
+    var pageSon = {name:state.replace('pages/',''),url:state};
+    ajaxPage(pageSon);
+    document.title = defaultTitle + " | " + pageSon.name.substring(0,1).toUpperCase() + pageSon.name.substring(1);
+  }
+});
+
+var menu = document.querySelector('#mainNav ul');
+function toggleMenu(){
+  menu.classList.toggle('open');
+  if(menu.classList.contains('open')){
+    TweenLite.set(menu,{height:"auto"});
+    TweenLite.from(menu,1,{height:0,ease:Power4.easeInOut});
+  }else{
+    TweenLite.to(menu,1,{height:0,ease:Power4.easeInOut});
+  }
+}
+console.log(hamburger);
+hamburger.addEventListener('click',function(e){
+  e.preventDefault();
+  if(!mobile){
+    mobile = true;
+  }
+  toggleMenu();
+},false);
+assignLinks();
 })();
