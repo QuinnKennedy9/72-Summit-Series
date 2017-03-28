@@ -25,6 +25,7 @@ body{
   color:$font;
   background: $background;
   font-family: $font-reg;
+  min-height: 60em;
 }
 .hidden{
   display: none !important;
@@ -245,6 +246,7 @@ footer{
   padding:0.5em 1.5em;
   width:100%;
   background: transparentize($footer, 0.5);
+  z-index: 100;
 
   .right{
     text-align: right;
@@ -262,10 +264,39 @@ footer{
 
 /*HOMEPAGE*/
 #splash{
-  background: url('../img/ACTION-1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  .back-img{
+    background: url('../img/ACTION-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+  .back-video{
+    //TEMPORARY
+    background: url('../img/ACTION-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    //END TEMPORARY
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    video{
+      position: absolute;
+      top:0;
+      left:0;
+      // width:100%;
+      height:100%;
+    }
+  }
   width:100%;
   display: block;
   position: relative;
@@ -274,6 +305,7 @@ footer{
   height:100vh;
   .banner{
     position: absolute;
+    text-shadow: 0.4rem 0.4rem 0.2rem rgba(0,0,0,0.5);
     font-family: $font-stack-header;
     color:#fff;
     box-sizing: border-box;
@@ -281,7 +313,7 @@ footer{
     text-align: center;
     width:100%;
     box-sizing: border-box;
-    z-index: 2;
+    z-index: 3;
     top:30%;
     .back{
       background-color:$red;
@@ -294,16 +326,35 @@ footer{
       z-index: -1;
     }
   }
-  .dark-overlay{
-    position: absolute;
-    background: #000;
-    opacity: 0.6;
+  .subheading{
+    text-align: center;
     width:100%;
-    height:100%;
-    left:0;
-    top:0;
-    // z-index: -1;
+    font-weight: 700;
+    margin:0;
+    font-family: $font-reg;
+    color:#fff;
+    font-size: 2.5rem;
+    z-index: 1;
+    position: absolute;
+    top:24rem;
+    //
   }
+}
+.dark-overlay:before{
+  position: absolute;
+  background: #000;
+  opacity: 0.6;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+  content: '';
+  z-index:-1;
+}
+#viewMore{
+  position: relative;
+  top:30em;
+  z-index: 10;
 }
 
 .callToAction{
@@ -343,6 +394,17 @@ footer{
       background-color: rgba(255,255,255,0.2);
     }
   }
+}
+
+#gallery{
+  position: relative;
+  min-height: 44em;
+  padding:1.5em;
+  background: url('../img/ACTION-5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
 }
 
 @media only screen and (min-width:40em){

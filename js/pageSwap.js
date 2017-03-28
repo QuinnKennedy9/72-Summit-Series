@@ -16,6 +16,9 @@
           mainContainer.innerHTML = response;
           TweenLite.to(mainContainer,0.5,{opacity:1});
           assignLinks();
+          var script = document.createElement('script');
+          script.src = "js/" + pageObject.name + ".js";
+          document.head.appendChild(script);
         }})
       }
      };
