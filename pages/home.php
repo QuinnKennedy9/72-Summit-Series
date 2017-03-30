@@ -7,5 +7,9 @@
     <a href="story" class="ajax white button">learn more</a>
   </div>
   <!-- <div class="dark-overlay"></div> -->
-    <div class="back-video" id="homepageVideo"></div>
+    <div class="back-video" id="homepageVideo">
+      <video controls="" width="1920" height="1080" autoplay muted>
+        <source src="vid/hockey.mp4" type="video/mp4">
+      </video>
+    </div>
 </section>
