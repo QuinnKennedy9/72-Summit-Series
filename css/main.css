@@ -603,7 +603,8 @@ footer {
     width: 100%;
     box-sizing: border-box;
     z-index: 3;
-    top: 30%; }
+    top: 30%;
+    transition: all ease 0.5s; }
     #splash .banner .back {
       background-color: #cc1515;
       height: 40%;
@@ -623,7 +624,8 @@ footer {
     z-index: 1;
     position: absolute;
     font-size: 1.5rem;
-    top: 18rem; }
+    top: 18rem;
+    transition: all ease 0.5s; }
   #splash #toggleSound {
     display: none;
     color: #ffffff;
@@ -650,9 +652,11 @@ footer {
 
 .callToAction {
   margin: 0 auto;
-  margin-top: 26em;
+  margin-top: 20em;
+  width: 80%;
   position: relative;
-  z-index: 2; }
+  z-index: 100;
+  transition: all ease 0.5s; }
   .callToAction .tagline {
     text-align: center;
     border-bottom: medium solid #cc1515;
@@ -685,12 +689,13 @@ footer {
 #gallery {
   position: relative;
   min-height: 44em;
-  padding: 4em;
+  padding: 1em;
   background: url("../img/ACTION-5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: 1; }
+  z-index: 1;
+  padding-bottom: 4em; }
   #gallery .inner {
     max-width: 60em;
     width: 100%;
@@ -701,24 +706,21 @@ footer {
     position: relative;
     float: left;
     box-sizing: border-box;
-    padding: 1em;
+    padding: 1em 0;
     width: 100%;
-    max-width: 33.33%; }
-    #gallery .image:hover .imageHeader {
-      opacity: 1.0; }
+    max-width: 40em; }
     #gallery .image img {
       width: 100%; }
     #gallery .image .imageHeader {
       position: absolute;
-      top: 3em;
-      width: 90%;
-      left: 5%;
+      width: 100%;
+      left: 0;
+      bottom: 1em;
       background: rgba(204, 21, 21, 0.8);
       color: #fff;
       padding: 0.5em;
       text-align: center;
       box-sizing: border-box;
-      opacity: 0.0;
       transition: all ease 0.5s; }
 
 @media only screen and (min-width: 40em) {
@@ -732,6 +734,9 @@ footer {
       padding-right: 1em; }
       header #mainNav ul li a:hover:after {
         width: 100%; }
+
+  .callToAction {
+    margin-top: 24em; }
 
   #splash .banner {
     font-size: 10rem; }

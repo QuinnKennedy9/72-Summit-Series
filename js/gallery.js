@@ -12,11 +12,4 @@
       goTo(document.querySelector(e.currentTarget.getAttribute('href')));
     },false);
   }
-  var para = document.querySelectorAll(".parallax");
-  var parallaxes = [];
-  var i=0;
-  for(p of para){
-    i++;
-    // parallaxes.push(new TrollScroll(p,{direction:"down",speed:bannerSpeed*i}));
-  }
 })();

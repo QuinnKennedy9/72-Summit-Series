@@ -15,7 +15,7 @@
   <!-- <div class="dark-overlay"></div> -->
   <div class="inner">
   <?php for($i=0;$i<6;$i++):?>
-  <a href="#" class="image parallax">
+  <a href="#" class="image">
     <h3 class="imageHeader">ACTION</h3>
     <img src="img/ACTION-1.jpg" alt="">
   </a>
