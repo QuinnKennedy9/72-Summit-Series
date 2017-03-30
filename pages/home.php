@@ -14,5 +14,5 @@
         <source src="#" type="video/mp4">
       </video>
     </div>
-    <a id="toggleSound" class="muted" href="#">UNMUTE</a>
+    <a id="toggleSound" href="#">UNMUTE</a>
 </section>

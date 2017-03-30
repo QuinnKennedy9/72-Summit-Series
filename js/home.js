@@ -2,10 +2,9 @@
 
 var vid = document.querySelector('#splashVideo');
 var screenWidth = window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth||0;
-function toggleVideo(){
 var toggleSound = document.querySelector('#toggleSound');
 var fade = document.querySelector('#fade');
-
+function toggleVideo(){
 if(screenWidth>=(16*40)){
   if(!vid.classList.contains('play')){
     vid.classList.add('play');
@@ -36,9 +35,10 @@ if(screenWidth>=(16*40)){
 
 
 
+toggleSound.classList.add('muted');
+
 toggleSound.addEventListener('click',function(event){
   event.preventDefault();
-  toggleSound.classList.toggle('muted');
   if(toggleSound.classList.contains('muted')){
     toggleSound.innerHTML = "MUTE";
     vid.muted = false;
@@ -51,6 +51,7 @@ toggleSound.addEventListener('click',function(event){
     fade.style.display = "block";
     TweenLite.to(fade,0.5,{opacity:1});
   }
+  toggleSound.classList.toggle('muted');
 },false);
 
 function offsetVideo(){
@@ -58,7 +59,8 @@ function offsetVideo(){
   var vidStyles = window.getComputedStyle(vid);
   var w = vidStyles.width;
   if(w==="auto"){
-    w = 1400;
+    vid.height = window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight||0;
+    w = vid.height*16/9;
   }
   w = parseInt(w);
   var offset;
@@ -68,7 +70,7 @@ function offsetVideo(){
     offset=0;
   }
   // console.log(-offset);
-  TweenLite.to(vid,1,{left:-offset});
+  TweenLite.to(vid,0.2,{left:-offset});
 }
 window.addEventListener('resize',function(){
   screenWidth = window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth||0;

@@ -319,7 +319,7 @@ footer{
     font-family: $font-stack-header;
     color:#fff;
     box-sizing: border-box;
-    font-size: 10rem;
+    font-size: 5rem;
     text-align: center;
     width:100%;
     box-sizing: border-box;
@@ -343,10 +343,10 @@ footer{
     margin:0;
     font-family: $font-reg;
     color:#fff;
-    font-size: 2.5rem;
     z-index: 1;
     position: absolute;
-    top:24rem;
+    font-size: 1.5rem;
+    top:18rem;
     //
   }
   #toggleSound{
@@ -484,12 +484,19 @@ footer{
       }
     }
   }
+}
   #splash{
+    .banner{
+      font-size: 10rem;
+    }
+    .subheading{
+      font-size: 2.5rem;
+      top:24rem;
+    }
     .back-video{
       video{
         display: block;
       }
     }
   }
-}
 }

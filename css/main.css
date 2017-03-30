@@ -598,7 +598,7 @@ footer {
     font-family: "pop_warner", "opensans-regular", "sans serif";
     color: #fff;
     box-sizing: border-box;
-    font-size: 10rem;
+    font-size: 5rem;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
@@ -620,10 +620,10 @@ footer {
     margin: 0;
     font-family: "Open Sans";
     color: #fff;
-    font-size: 2.5rem;
     z-index: 1;
     position: absolute;
-    top: 24rem; }
+    font-size: 1.5rem;
+    top: 18rem; }
   #splash #toggleSound {
     display: none;
     color: #ffffff;
@@ -732,5 +732,11 @@ footer {
       padding-right: 1em; }
       header #mainNav ul li a:hover:after {
         width: 100%; }
-  header #splash .back-video video {
+
+  #splash .banner {
+    font-size: 10rem; }
+  #splash .subheading {
+    font-size: 2.5rem;
+    top: 24rem; }
+  #splash .back-video video {
     display: block; } }
