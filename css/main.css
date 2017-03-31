@@ -553,6 +553,8 @@ footer {
   footer .left {
     display: inline-block;
     float: left; }
+    footer .left a {
+      color: inherit; }
 
 /*HOMEPAGE*/
 #splash {
@@ -603,8 +605,7 @@ footer {
     width: 100%;
     box-sizing: border-box;
     z-index: 3;
-    top: 30%;
-    transition: all ease 0.5s; }
+    top: 30%; }
     #splash .banner .back {
       background-color: #cc1515;
       height: 40%;
@@ -624,8 +625,7 @@ footer {
     z-index: 1;
     position: absolute;
     font-size: 1.5rem;
-    top: 18rem;
-    transition: all ease 0.5s; }
+    top: 18rem; }
   #splash #toggleSound {
     display: none;
     color: #ffffff;
@@ -655,8 +655,7 @@ footer {
   margin-top: 20em;
   width: 80%;
   position: relative;
-  z-index: 90;
-  transition: all ease 0.5s; }
+  z-index: 90; }
   .callToAction .tagline {
     text-align: center;
     border-bottom: medium solid #cc1515;
@@ -667,6 +666,43 @@ footer {
     padding: 0.2em;
     margin-bottom: 1em; }
 
+.arrow {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  padding: 0.75em 0.9em;
+  text-align: center;
+  display: block;
+  width: 100%;
+  max-width: 10em;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  text-transform: uppercase; }
+  .arrow:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1em;
+    left: 45%;
+    width: 0;
+    height: 0;
+    transform-origin: 50% 50%;
+    border: 0.6em solid transparent;
+    border-top: 0.8em solid #fff; }
+  .arrow:hover:after {
+    animation: bounce 1s ease infinite; }
+  .arrow.white {
+    color: white;
+    border-color: white; }
+
+@keyframes bounce {
+  0% {
+    bottom: -1em; }
+  50% {
+    bottom: -1.2em; }
+  100% {
+    bottom: -1em; } }
 .button {
   text-decoration: none;
   color: inherit;
@@ -723,8 +759,45 @@ footer {
       box-sizing: border-box;
       transition: all ease 0.5s; }
 
+#timeline {
+  padding: 2em; }
+
+.placeholder {
+  width: 100%;
+  max-width: 40em;
+  margin: auto;
+  height: 60em;
+  background: #cc1515;
+  border: #fff thick solid;
+  box-sizing: border-box; }
+
 #loginForm {
-  margin-top: 20em; }
+  width: 100%;
+  max-width: 22em;
+  margin: 0 auto;
+  margin-top: 26em; }
+  #loginForm label {
+    float: left;
+    padding: 0.5em 0.75em;
+    margin-top: 1em; }
+  #loginForm input {
+    float: right;
+    clear: right;
+    color: #fff;
+    margin-top: 1em; }
+    #loginForm input:not([type="submit"]) {
+      border: medium solid #e6e6e6;
+      background: transparent;
+      padding: 0.5em 0.75em; }
+      #loginForm input:not([type="submit"]):focus {
+        outline: 0;
+        border: medium solid #fff; }
+    #loginForm input[type="submit"] {
+      margin-top: 1.5em;
+      color: #fff;
+      padding: 0.5em 1.75em;
+      background: #cc1515;
+      border: medium solid #aa0e0e; }
 
 @media only screen and (min-width: 40em) {
   header h1 {
