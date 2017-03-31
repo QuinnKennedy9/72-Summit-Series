@@ -1,12 +1,8 @@
 <?php
-$page = 'login';
+$page = 'admin/login';
 if($_SESSION["loggedIn"] == "true"){
-    header("Location: home");
-    $l = "YES";
-}else{
-  $l = "NO";
+    header("Location: admin/dashboard");
 }
-echo '<div id="TEST">'.$l.'</div>';
 ?>
 <?php
 function format($data) {
@@ -40,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           while($row = $result->fetch_assoc()) {
             if(password_verify($p,$row['p_phrase'])){
               $_SESSION["loggedIn"] = "true";
-              header("Location: home");
+              header("Location: dashboard");
             }
           }
         } else {

@@ -554,7 +554,8 @@ footer {
     display: inline-block;
     float: left; }
     footer .left a {
-      color: inherit; }
+      color: inherit;
+      margin-right: 1em; }
 
 /*HOMEPAGE*/
 #splash {
@@ -733,18 +734,17 @@ footer {
   z-index: 1;
   padding-bottom: 4em; }
   #gallery .inner {
-    max-width: 60em;
-    width: 100%;
     margin: 0 auto;
     border-top: thin solid #fff;
-    padding-top: 2em; }
+    padding-top: 2em;
+    text-align: center; }
   #gallery .image {
+    display: inline-block;
     position: relative;
-    float: left;
+    margin: 1em;
     box-sizing: border-box;
-    padding: 1em 0;
-    width: 100%;
-    max-width: 40em; }
+    width: 80%;
+    max-width: 20em; }
     #gallery .image img {
       width: 100%; }
     #gallery .image .imageHeader {
@@ -758,6 +758,17 @@ footer {
       text-align: center;
       box-sizing: border-box;
       transition: all ease 0.5s; }
+  #gallery .buttons {
+    text-align: center; }
+    #gallery .buttons a {
+      display: inline-block;
+      border: medium solid #fff;
+      padding: 0.5em 1em;
+      color: #fff;
+      text-decoration: none;
+      transition: background ease 0.5s; }
+      #gallery .buttons a:hover {
+        background: rgba(204, 21, 21, 0.5); }
 
 #timeline {
   padding: 2em; }
@@ -770,6 +781,41 @@ footer {
   background: #cc1515;
   border: #fff thick solid;
   box-sizing: border-box; }
+
+#upload {
+  padding: 1em;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 8em; }
+  #upload input {
+    margin: 0.25em auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    max-width: 14em;
+    box-sizing: border-box; }
+    #upload input[type="text"] {
+      padding: 0.25em 0.5em;
+      border: medium solid #fff;
+      background: transparent; }
+    #upload input[type="submit"] {
+      margin-top: 1em;
+      padding: 0.25em 0.5em;
+      box-sizing: border-box;
+      width: 100%;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      max-width: 12em;
+      background: #cc1515;
+      border: medium solid #aa0e0e; }
+  #upload label {
+    margin: 0.25em auto;
+    margin-top: 1em;
+    display: block;
+    width: 100%;
+    max-width: 14em; }
 
 #loginForm {
   width: 100%;
@@ -820,4 +866,24 @@ footer {
     font-size: 2.5rem;
     top: 24rem; }
   #splash .back-video video {
-    display: block; } }
+    display: block; }
+
+  #gallery .inner {
+    text-align: center; }
+  #gallery .image {
+    position: relative;
+    display: inline-block;
+    margin: 1em;
+    box-sizing: border-box;
+    width: 100%; }
+    #gallery .image .imageHeader {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 1em;
+      background: rgba(204, 21, 21, 0.8);
+      color: #fff;
+      padding: 0.5em;
+      text-align: center;
+      box-sizing: border-box;
+      transition: all ease 0.5s; } }

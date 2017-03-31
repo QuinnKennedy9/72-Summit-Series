@@ -13,23 +13,47 @@
 </section>
 <section id="gallery" class="dark-overlay">
   <!-- <div class="dark-overlay"></div> -->
-  <div class="inner">
-  <?php for($i=0;$i<6;$i++):?>
-  <a href="#" class="image">
-    <h3 class="imageHeader">ACTION</h3>
-    <img src="img/ACTION-1.jpg" alt="">
-  </a>
-<?php endfor;?>
+  <div class="inner clearfix">
+    <!-- INSERT GALLERY IMAGES -->
+    <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "db_teamcanada";
+    $conn = new mysqli($servername, $username, $password,$dbname);
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+    $noPages = 0;
+    $sql = "SELECT * FROM `gallery_images`";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+        echo '<a href="#" class="image"><h3 class="imageHeader">'.$row['i_title'].'</h3><img src="'.$row['i_src'].'" alt="'.$row['i_desc'].'"></a>';
+        $noPages++;
+      }
+    } else {
+      echo "<div class='centered'>Nothing in the gallery right now!</div>";
+    }
+     ?>
+
 <div class="buttons">
-  <?php $noPages = 10;?>
   <?php $currentPage = 1;?>
   <?php if($currentPage>4){echo '<a href="1" class="pageButton">First Page</a>';}?>
   <?php if($currentPage>1){echo '<a href='.($currentPage-1).'class="pageButton">Prev</a>';}?>
+
   <?php for($i=0;$i<4;$i++):?>
     <a href=<?php echo $i+1;?> class="pageButton"><?php echo $i+1;?></a>
   <?php endfor;?>
   <?php if($currentPage>1){echo '<a href='.($currentPage+1).'class="pageButton">Prev</a>';}?>
   <?php if($noPages>4){echo '<a href='. ($noPages). 'class="pageButton">Last Page</a>';}?>
 </div>
+<?php
+if(isset($_SESSION)){  
+  if($_SESSION["loggedIn"] == "true"){
+    echo '<a id="gallery-upload" href="gallery-upload">Upload</a>';
+}
+}
+ ?>
 </div>
 </section>
