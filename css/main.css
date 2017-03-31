@@ -601,7 +601,7 @@ footer {
     font-family: "pop_warner", "opensans-regular", "sans serif";
     color: #fff;
     box-sizing: border-box;
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
@@ -626,7 +626,12 @@ footer {
     z-index: 1;
     position: absolute;
     font-size: 1.5rem;
+    padding: 0 1em;
+    box-sizing: border-box;
     top: 18rem; }
+    #splash .subheading .in {
+      max-width: 20em;
+      margin: 0 auto; }
   #splash #toggleSound {
     display: none;
     color: #ffffff;
@@ -635,7 +640,7 @@ footer {
     bottom: 3em;
     right: 2em; }
 
-.dark-overlay:before {
+.dark-overlay:after {
   position: absolute;
   background: #000;
   opacity: 0.6;
@@ -645,6 +650,8 @@ footer {
   top: 0;
   content: '';
   z-index: -1; }
+.dark-overlay.darker:after {
+  opacity: 0.9; }
 
 #viewMore {
   position: relative;
@@ -727,7 +734,7 @@ footer {
   position: relative;
   min-height: 44em;
   padding: 1em;
-  background: url("../img/ACTION-5.jpg");
+  background: url("../img/ACTION-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -771,16 +778,31 @@ footer {
         background: rgba(204, 21, 21, 0.5); }
 
 #timeline {
-  padding: 2em; }
+  position: relative;
+  padding: 2em;
+  background: url("../img/ACTION-5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+#partnerships {
+  position: relative;
+  padding: 2em;
+  background: url("../img/ACTION-5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
 
 .placeholder {
+  position: relative;
   width: 100%;
   max-width: 40em;
   margin: auto;
   height: 60em;
   background: #cc1515;
   border: #fff thick solid;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  z-index: 1; }
 
 #upload {
   padding: 1em;
@@ -861,9 +883,9 @@ footer {
     margin-top: 24em; }
 
   #splash .banner {
-    font-size: 10rem; }
+    font-size: 8rem; }
   #splash .subheading {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     top: 24rem; }
   #splash .back-video video {
     display: block; }

@@ -15,13 +15,4 @@ function toggleMenu(event){
   }
 }
 hamburger.addEventListener('click',toggleMenu,false);
-var scrollingLinks = document.querySelectorAll('.scroller');
-if(scrollingLinks[0]!=null){  
-  for(b of scrollingLinks){
-    b.addEventListener('click',function(e){
-      e.preventDefault();
-      goTo(document.querySelector(e.currentTarget.getAttribute('href')));
-    },false);
-  }
-}
 })();
