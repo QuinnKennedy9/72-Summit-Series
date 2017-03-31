@@ -655,7 +655,7 @@ footer {
   margin-top: 20em;
   width: 80%;
   position: relative;
-  z-index: 100;
+  z-index: 90;
   transition: all ease 0.5s; }
   .callToAction .tagline {
     text-align: center;
@@ -722,6 +722,9 @@ footer {
       text-align: center;
       box-sizing: border-box;
       transition: all ease 0.5s; }
+
+#loginForm {
+  margin-top: 20em; }
 
 @media only screen and (min-width: 40em) {
   header h1 {

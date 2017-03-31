@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <!doctype html>
 <html>
-<?php $page="home"; ?>
+<?php $page="login"; ?>
 <?php @require "includes/templates/doctop.php"; ?>
 <?php @require "includes/templates/header.php"; ?>
 <main id="pageContainer">
