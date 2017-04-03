@@ -1,7 +1,7 @@
 <?php
-$page = 'admin/login';
+$page = '=login';
 if($_SESSION["loggedIn"] == "true"){
-    header("Location: admin/dashboard");
+    header("Location: dashboard");
 }
 ?>
 <?php

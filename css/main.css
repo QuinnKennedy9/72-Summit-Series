@@ -776,6 +776,9 @@ footer {
       transition: background ease 0.5s; }
       #gallery .buttons a:hover {
         background: rgba(204, 21, 21, 0.5); }
+  #gallery #gallery-upload {
+    margin-top: 5em;
+    clear: both; }
 
 #timeline {
   position: relative;
@@ -892,12 +895,28 @@ footer {
 
   #gallery .inner {
     text-align: center; }
+  #gallery #nothing {
+    padding: 4em; }
   #gallery .image {
     position: relative;
     display: inline-block;
     margin: 1em;
     box-sizing: border-box;
     width: 100%; }
+    #gallery .image .delete {
+      display: block;
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      color: #cc1515;
+      text-decoration: none;
+      border-radius: 50%;
+      text-align: center;
+      width: 1.5rem;
+      line-height: 1.5rem;
+      z-index: 1000;
+      height: 1.5rem;
+      background: #fff; }
     #gallery .image .imageHeader {
       position: absolute;
       width: 100%;

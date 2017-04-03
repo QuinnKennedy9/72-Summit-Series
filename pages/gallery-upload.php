@@ -1,4 +1,4 @@
-<?php $page = "admin/gallery-upload";
+<?php $page = "gallery-upload";
 if($_SESSION["loggedIn"] !== "true"){
     header("Location: login");
 }

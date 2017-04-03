@@ -39,7 +39,7 @@
         $noResults++;
       }
     } else {
-      echo "<div class='centered' id='nothing'>Nothing in the gallery right now!</div>";
+      echo "<div class='centered'>Nothing in the gallery right now!</div>";
     }
      ?>
 
@@ -53,7 +53,7 @@
 </div>
 <?php
 if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == "true"){
-  echo '<a id="gallery-upload" class="ajax white button" href="gallery-upload">Upload</a>';
+  echo '<a id="gallery-upload" class="white button" href="gallery-upload">Upload</a>';
 }
  ?>
 

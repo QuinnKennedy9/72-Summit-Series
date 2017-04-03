@@ -389,6 +389,7 @@ footer{
     }
   }
 }
+
 #viewMore{
   position: relative;
   top:30em;
@@ -530,6 +531,10 @@ footer{
         background: transparentize($red,0.5);
       }
     }
+  }
+  #gallery-upload{
+    margin-top: 5em;
+    clear: both;
   }
 }
 
@@ -678,12 +683,32 @@ footer{
     .inner{
       text-align: center;
     }
+    #nothing{
+      padding:4em;
+    }
     .image{
       position: relative;
       display: inline-block;
       margin:1em;
       box-sizing: border-box;
       width:100%;
+      .delete{
+        display: block;
+        position: absolute;
+        top:0.5rem;
+        right:0.5rem;
+        color:$red;
+        text-decoration: none;
+        border-radius: 50%;
+        text-align: center;
+        width:1.5rem;
+        line-height: 1.5rem;
+        z-index: 1000;
+        height:1.5rem;
+        background: $white;
+      }
+      .img{
+      }
       .imageHeader{
         position: absolute;
         width:100%;
