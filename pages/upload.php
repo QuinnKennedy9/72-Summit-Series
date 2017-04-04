@@ -1,6 +1,8 @@
-<?php $page = "admin/upload";
+<?php $page = "upload";
 if($_SESSION["loggedIn"] !== "true"){
     header("Location: login");
+}else{
+  $loggedIn = "true";
 }
 ?>
 <br>

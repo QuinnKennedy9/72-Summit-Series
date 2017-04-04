@@ -1,6 +1,8 @@
 <?php $page = "gallery-upload";
 if($_SESSION["loggedIn"] !== "true"){
     header("Location: login");
+}else{
+  $loggedIn = "true";
 }
 ?>
 <?php
@@ -33,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $data = htmlspecialchars($data);
         return $data;
       }
-      if(empty($errors)==true){
+      if(empty($errors)==true && $loggedIn === "true"){
          move_uploaded_file($file_tmp,"img/uploads/gallery/".$file_name);
           //INSERT INTO DB
                  $servername = "localhost";

@@ -1,4 +1,8 @@
-<?php $page = "gallery" ?>
+<?php $page = "gallery";
+if($_SESSION["loggedIn"] === "true"){
+  $loggedIn = "true";
+}
+ ?>
 <section id="splash" class="dark-overlay">
   <div class="banner">GALLERY<div class="back"></div></div>
   <h4 class="subheading">VIDEOS, PHOTOS &amp; NEWS</h4>
@@ -32,7 +36,7 @@
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
         echo '<div class="image">';
-        if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == "true"){
+        if(isset($loggedIn) && $loggedIn == "true"){
           echo '<a class="delete" href="gallery-delete?id='.$row['id'].'">X</a>';
         }
         echo '<h3 class="imageHeader">'.$row['i_title'].'</h3><img src="'.$row['i_src'].'" alt="'.$row['i_desc'].'"></div>';
@@ -52,7 +56,7 @@
   <?php if($noResults>=4){echo '<a href="gallery?page='. ($currentPage+1). '" class="gallajax pageButton">Next</a>';}?>
 </div>
 <?php
-if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == "true"){
+if(isset($loggedIn) && $loggedIn == "true"){
   echo '<a id="gallery-upload" class="white button" href="gallery-upload">Upload</a>';
 }
  ?>

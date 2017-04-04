@@ -1,7 +1,8 @@
 <?php
-$page = '=login';
-if($_SESSION["loggedIn"] == "true"){
-    header("Location: dashboard");
+$page = 'login';
+if($_SESSION["loggedIn"] === "true"){
+  header("Location: dashboard");
+  $loggedIn = "true";
 }
 ?>
 <?php
@@ -49,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="banner">LOGIN<div class="back"></div></div>
         <form id="loginForm" action="login" method="POST">
           <label for="user">email:</label>
-          <input id="user" name="email" type="text" value=<?php echo $u;?>><br><br>
+          <input id="user" name="email" type="text"><br><br>
           <label for="pass">Passphrase:</label>
           <input id="pass" name="password" type="password"><br>
           <input type="submit" value="Login">

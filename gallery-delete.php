@@ -5,6 +5,7 @@
 if($_SESSION["loggedIn"] !== "true"){
     header("Location: login");
 }else{
+  $loggedIn = "true";
     //REMOVE FROM DB
        $servername = "localhost";
        $username = "root";
