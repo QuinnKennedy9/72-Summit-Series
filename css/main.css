@@ -783,10 +783,80 @@ footer {
 #timeline {
   position: relative;
   padding: 2em;
-  background: url("../img/ACTION-5.jpg");
+  background: url("../img/history_back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  z-index: 0; }
+  #timeline > h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1.5rem; }
+  #timeline .inner {
+    max-width: 60em;
+    margin: 0 auto;
+    min-height: 40em;
+    margin-bottom: 2em; }
+    #timeline .inner .timelineCont .half {
+      width: 50%;
+      display: block;
+      float: left;
+      min-height: 2em;
+      padding: 1em;
+      box-sizing: border-box; }
+      #timeline .inner .timelineCont .half.left .modal {
+        margin: 0 auto;
+        width: 90%;
+        max-width: 30em;
+        background: #cc1515;
+        color: #fff;
+        padding: 2em;
+        padding-bottom: 1em;
+        box-sizing: border-box;
+        border-bottom: 1em solid #aa0e0e;
+        position: relative; }
+        #timeline .inner .timelineCont .half.left .modal .modal-arrow {
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 0;
+          top: 45%;
+          right: -4em;
+          border: 2em solid transparent;
+          border-left: 2em solid #cc1515; }
+      #timeline .inner .timelineCont .half.right {
+        border-left: thick solid #fff;
+        height: 30em;
+        padding-top: 2em; }
+        #timeline .inner .timelineCont .half.right ul {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          margin-left: 5em; }
+          #timeline .inner .timelineCont .half.right ul li {
+            position: relative; }
+            #timeline .inner .timelineCont .half.right ul li ul {
+              position: relative;
+              display: block;
+              height: 0;
+              overflow-y: hidden;
+              margin-left: 2em;
+              margin-bottom: 0; }
+            #timeline .inner .timelineCont .half.right ul li a {
+              display: block;
+              padding: 0.5em 1em;
+              text-decoration: none;
+              color: inherit;
+              position: relative; }
+              #timeline .inner .timelineCont .half.right ul li a:before {
+                content: '';
+                height: 0;
+                width: 6.2em;
+                left: -6.2em;
+                border-bottom: medium solid #fff;
+                top: 50%;
+                position: absolute; }
 
 #partnerships {
   position: relative;

@@ -541,7 +541,95 @@ footer{
 #timeline{
   position: relative;
   padding:2em;
-  @include back-img('ACTION-5.jpg');
+  @include back-img('history_back.jpg');
+  z-index:0;
+  &>h2{
+    width:100%;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1.5rem;
+  }
+  .inner{
+    max-width: 60em;
+    margin: 0 auto;
+    min-height: 40em;
+    // background: $white;
+    margin-bottom:2em;
+    .timelineCont{
+      .half{
+        width:50%;
+        display: block;
+        float: left;
+        min-height: 2em;
+        padding:1em;
+        box-sizing: border-box;
+        &.left{
+          // background: #676;
+          .modal{
+            margin: 0 auto;
+            width:90%;
+            max-width: 30em;
+            background: $red;
+            color:$white;
+            padding:2em;
+            padding-bottom: 1em;
+            box-sizing: border-box;
+            border-bottom: 1em solid $red-dark;
+            position: relative;
+            .modal-arrow{
+              position: absolute;
+              content:'';
+              width: 0;
+              height:0;
+              top:45%;
+              right:-4em;
+              border:2em solid transparent;
+              border-left: 2em solid $red;
+            }
+          }
+        }
+        &.right{
+          // background: #343;
+          border-left: thick solid $white;
+          height: 30em;
+          padding-top: 2em;
+          ul{
+            padding:0;
+            margin:0;
+            list-style: none;
+            margin-left: 5em;
+            li{
+              position: relative;
+              ul{
+                position: relative;
+                display: block;
+                height:0;
+                overflow-y: hidden;
+                margin-left: 2em;
+                margin-bottom: 0;
+              }
+              a{
+                display: block;
+                padding:0.5em 1em;
+                text-decoration: none;
+                color:inherit;
+                position: relative;
+                &:before{
+                  content:'';
+                  height:0;
+                  width:6.2em;
+                  left:-6.2em;
+                  border-bottom: medium solid $white;
+                  top:50%;
+                  position: absolute;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 #partnerships{
   position: relative;
