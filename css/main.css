@@ -875,6 +875,21 @@ footer {
   box-sizing: border-box;
   z-index: 1; }
 
+.delete {
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #cc1515;
+  text-decoration: none;
+  border-radius: 50%;
+  text-align: center;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  z-index: 1000;
+  height: 1.5rem;
+  background: #fff; }
+
 #upload {
   padding: 1em;
   box-sizing: border-box;
@@ -971,20 +986,6 @@ footer {
     margin: 1em;
     box-sizing: border-box;
     width: 100%; }
-    #gallery .image .delete {
-      display: block;
-      position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
-      color: #cc1515;
-      text-decoration: none;
-      border-radius: 50%;
-      text-align: center;
-      width: 1.5rem;
-      line-height: 1.5rem;
-      z-index: 1000;
-      height: 1.5rem;
-      background: #fff; }
     #gallery .image .imageHeader {
       position: absolute;
       width: 100%;

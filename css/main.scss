@@ -649,6 +649,23 @@ footer{
   z-index: 1;
 }
 
+.delete{
+  display: block;
+  position: absolute;
+  top:0.5rem;
+  right:0.5rem;
+  color:$red;
+  text-decoration: none;
+  border-radius: 50%;
+  text-align: center;
+  width:1.5rem;
+  line-height: 1.5rem;
+  z-index: 1000;
+  height:1.5rem;
+  background: $white;
+}
+
+
 // INSERT NEW PAGES ABOVE THIS LINE
 
 #upload{
@@ -781,21 +798,6 @@ footer{
       margin:1em;
       box-sizing: border-box;
       width:100%;
-      .delete{
-        display: block;
-        position: absolute;
-        top:0.5rem;
-        right:0.5rem;
-        color:$red;
-        text-decoration: none;
-        border-radius: 50%;
-        text-align: center;
-        width:1.5rem;
-        line-height: 1.5rem;
-        z-index: 1000;
-        height:1.5rem;
-        background: $white;
-      }
       .img{
       }
       .imageHeader{
