@@ -27,20 +27,20 @@
       </div>
       <div class="right half">
         <ul id="events">
-          <li><a href="#">BEFORE THE SERIES</a></li>
-          <li><a class="tl" href="#">DURING THE SERIES</a>
+          <li><a id="beforeTheSeries" class="tl" href="#">BEFORE THE SERIES</a></li>
+          <li><a id="duringTheSeries" class="tl drop" href="#">DURING THE SERIES</a>
               <ul class="dropdown">
-                <li><a href="#">Game One</a></li>
-                <li><a href="#">Game Two</a></li>
-                <li><a href="#">Game Three</a></li>
-                <li><a href="#">Game Four</a></li>
-                <li><a href="#">Game Five</a></li>
-                <li><a href="#">Game Six</a></li>
-                <li><a href="#">Game Seven</a></li>
-                <li><a href="#">Game Eight</a></li>
+                <li><a id="gameOne" class="lle" href="#">Game One</a></li>
+                <li><a id="gameTwo" class="lle" href="#">Game Two</a></li>
+                <li><a id="gameThree" class="lle" href="#">Game Three</a></li>
+                <li><a id="gameFour" class="lle" href="#">Game Four</a></li>
+                <li><a id="gameFive" class="lle" href="#">Game Five</a></li>
+                <li><a id="gameSix" class="lle" href="#">Game Six</a></li>
+                <li><a id="gameSeven" class="lle" href="#">Game Seven</a></li>
+                <li><a id="gameEight" class="lle" href="#">Game Eight</a></li>
               </ul>
           </li>
-          <li><a href="#">AFTER THE SERIES</a></li>
+          <li><a id="afterTheSeries" class="tl" href="#">AFTER THE SERIES</a></li>
         </ul>
       </div>
     </div>

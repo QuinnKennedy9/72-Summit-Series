@@ -540,7 +540,6 @@ footer{
 
 #timeline{
   position: relative;
-  padding:2em;
   @include back-img('history_back.jpg');
   z-index:0;
   &>h2{
@@ -557,21 +556,29 @@ footer{
     margin-bottom:2em;
     .timelineCont{
       .half{
-        width:50%;
+        width:100%;
         display: block;
-        float: left;
-        min-height: 2em;
+        float: none;
+        min-height: 10em;
         padding:1em;
         box-sizing: border-box;
         &.left{
-          // background: #676;
           .modal{
+            img{
+              width:100%;
+              margin:0 auto;
+              max-width: 30em;
+              min-height: 10em;
+              max-height: 20em;
+              display: block;
+              background: #fff;
+            }
             margin: 0 auto;
-            width:90%;
+            width:100%;
             max-width: 30em;
             background: $red;
             color:$white;
-            padding:2em;
+            padding:3em 2em;
             padding-bottom: 1em;
             box-sizing: border-box;
             border-bottom: 1em solid $red-dark;
@@ -581,47 +588,41 @@ footer{
               content:'';
               width: 0;
               height:0;
-              top:45%;
+              top:2.2em;
               right:-4em;
               border:2em solid transparent;
               border-left: 2em solid $red;
+              display: none;
             }
           }
         }
         &.right{
-          // background: #343;
-          border-left: thick solid $white;
-          height: 30em;
-          padding-top: 2em;
           ul{
             padding:0;
             margin:0;
             list-style: none;
-            margin-left: 5em;
             li{
-              position: relative;
-              ul{
-                position: relative;
-                display: block;
-                height:0;
-                overflow-y: hidden;
-                margin-left: 2em;
-                margin-bottom: 0;
-              }
+              display: block;
               a{
                 display: block;
-                padding:0.5em 1em;
+                color:$white;
                 text-decoration: none;
-                color:inherit;
-                position: relative;
-                &:before{
-                  content:'';
-                  height:0;
-                  width:6.2em;
-                  left:-6.2em;
-                  border-bottom: medium solid $white;
-                  top:50%;
-                  position: absolute;
+                padding:1em;
+                background: $red;
+                border-bottom: thin solid $red-dark;
+                &.current{
+                  color:$red;
+                  font-weight: 700;
+                }
+              }
+              ul{
+                height:0;
+                overflow: hidden;
+                li{
+                  a{
+                    background: $red-dark;
+                    border-bottom: thin solid $red;
+                  }
                 }
               }
             }
@@ -811,4 +812,78 @@ footer{
       }
     }
   }
+  #timeline{
+    padding:2em;
+    .inner{
+      .timelineCont{
+        .half{
+          width:50%;
+          &.left{
+            float: left !important;
+            // background: #676;
+            .modal{
+              width:90%;
+              .modal-arrow{
+                display: block;
+              }
+            }
+          }
+          &.right{
+            float: right !important;
+
+            // background: #343;
+            border-left: thick solid $white;
+            margin-top: 1em;
+            height: 34em;
+            padding-top: 3em;
+            padding-bottom: 4em;
+            ul{
+              padding:0;
+              margin:0;
+              list-style: none;
+              margin-left: 5em;
+              li{
+                position: relative;
+                ul{
+                  position: relative;
+                  display: block;
+                  height:0;
+                  overflow-y: hidden;
+                  margin-left: 2em;
+                  margin-bottom: 0;
+                  li{
+                    a{
+                      background: transparent;
+                      border:0;
+                    }
+                  }
+                }
+                a{
+                  background: transparent;
+                  border:0;
+                  display: block;
+                  padding:0.5em 1em;
+                  text-decoration: none;
+                  color:inherit;
+                  position: relative;
+                  &:before{
+                    content:'';
+                    height:0;
+                    width:6.2em;
+                    left:-6.2em;
+                    border-bottom: medium solid $white;
+                    top:50%;
+                    position: absolute;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width:60em){
 }
