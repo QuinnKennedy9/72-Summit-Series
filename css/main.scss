@@ -25,7 +25,7 @@ $white:#fff;
 
 // FONTS
 $font-reg:"Open Sans";
-$font-stack-header: "pop_warner", "opensans-regular", "sans serif";
+$font-stack-header:"pop_warner", "opensans-regular", "sans serif";
 
 // MAIN
 body{
@@ -741,6 +741,34 @@ footer{
       background: $red;
       border:medium solid $red-dark;
     }
+  }
+}
+
+#partners{
+  background: url('../img/ACTION-5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  #upperPartner{
+    padding-top: 5em;
+    margin-left: 9em;
+  }
+  #lowerPartner{
+    margin-top: 5em;
+    margin-left: 15em;
+    margin-bottom: 5em;
+  }
+  .partnerImage{
+    height:11.5em;
+    width:11.5em;
+    margin-left: 1.25em;
+    margin-right: 1.25em;
+    -webkit-box-shadow: 0px 4px 42px -8px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 4px 42px -8px rgba(255,255,255,1);
+    box-shadow: 0px 4px 42px -8px rgba(255,255,255,1);
+  }
+  #partnerButton{
+    margin-bottom: 6em;
   }
 }
 
