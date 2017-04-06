@@ -6,6 +6,7 @@
   <div class="callToAction">
     <div class="tagline">Questions, Partnerships, and Events</div>
   </div>
+  <a href="#form" id="formButton" class="scroller white arrow">SCROLL</a>
   <div class="dark-overlay"></div>
   <div class="back-img"></div>
 </section>

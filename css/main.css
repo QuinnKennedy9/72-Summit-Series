@@ -672,7 +672,9 @@ footer {
     max-width: 22em;
     margin: 0 auto;
     padding: 0.2em;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    position: relative;
+    top: 0; }
 
 .arrow {
   text-decoration: none;
@@ -997,7 +999,6 @@ footer {
     font-size: 1.5rem;
     top: 24rem; }
   #splash .back-video video {
-
     display: block; }
 
   #gallery .inner {
@@ -1073,3 +1074,4 @@ footer {
                 top: 50%;
                 position: absolute; } }
 
+/*# sourceMappingURL=main.css.map */

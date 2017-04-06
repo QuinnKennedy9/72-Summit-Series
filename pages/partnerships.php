@@ -5,7 +5,7 @@
   <div class="banner">Our Partners<div class="back"></div></div>
   <div class="callToAction">
     <div class="tagline">The 28,800 foundation is possible due to the generous contributions of our partners</div>
-    <a href="#partnerships" class="scroller white arrow">SCROLL</a>
+    <a href="#partners" id="partners2" class="scroller white arrow">SCROLL</a>
   </div>
   <div class="dark-overlay"></div>
   <div class="back-img"></div>
