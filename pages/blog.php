@@ -1,8 +1,13 @@
-<?php $page = "gallery"; ?>
+<?php $page = "gallery";
+if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
+  $loggedIn = "true";
+}
+ ?>
 <section id="splash" class="dark-overlay">
-  <div class="banner">GALLERY<div class="back"></div></div>
-  <h4 class="subheading">VIDEOS, PHOTOS &amp; NEWS</h4>
-  <a id="viewMore" href="#gallery" class="scroller white button">View</a>
+  <div class="banner">BLOG<div class="back"></div></div>
+  <br>
+  <h4 class="subheading">SHARING THE STORY, EVERYDAY</h4>
+  <a id="viewMore" href="#gallery" class="scroller white button">Read</a>
   <!-- <div class="dark-overlay"></div> -->
   <div class="back-img"></div>
 </section>
@@ -24,22 +29,22 @@
     }else{
       $currentPage = $_GET['page'];
     }
-    $limit = 4;
+    $limit = 10;
     $end = $limit * ($currentPage-1);
     $noResults=0;
-    $sql = "SELECT * FROM `gallery_images` LIMIT $limit OFFSET $end";
+    $sql = "SELECT * FROM `blogposts` ORDER BY `p_date` DESC LIMIT $limit OFFSET $end";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
         echo '<div class="image">';
         if(isset($loggedIn) && $loggedIn == "true"){
-          echo '<a class="delete" href="gallery-delete?id='.$row['id'].'">X</a>';
+          echo '<a class="delete" href="blog-delete?id='.$row['id'].'">X</a>';
         }
-        echo '<h3 class="imageHeader">'.$row['i_title'].'</h3><img src="'.$row['i_src'].'" alt="'.$row['i_desc'].'"></div>';
+        echo '<h3 class="imageHeader">'.$row['p_title'].'</h3><img src="'.$row['p_img_src'].'" alt="'.$row['p_content'].'"><p>'.$row['p_content'].'</p></div>';
         $noResults++;
       }
     } else {
-      echo "<div class='centered' id='nothing'>Nothing in the gallery right now!</div>";
+      echo "<div class='centered'>Nothing posted right now!</div>";
     }
      ?>
 
@@ -53,7 +58,7 @@
 </div>
 <?php
 if(isset($loggedIn) && $loggedIn == "true"){
-  echo '<a id="gallery-upload" class="ajax white button" href="gallery-upload">Upload</a>';
+  echo '<a id="gallery-upload" class="white button" href="gallery-upload">Upload</a>';
 }
  ?>
 

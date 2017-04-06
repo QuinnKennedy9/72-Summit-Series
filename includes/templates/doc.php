@@ -1,6 +1,3 @@
-<!doctype html>
-<html>
-<?php $page="story"; ?>
 <?php @require "includes/templates/doctop.php"; ?>
 <?php @require "includes/templates/header.php"; ?>
 <main id="pageContainer">
@@ -8,4 +5,3 @@
 </main>
 <?php @require "includes/templates/footer.php"; ?>
 <?php @require "includes/templates/docbot.php"; ?>
-</html>

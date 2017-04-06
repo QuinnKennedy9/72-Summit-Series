@@ -6,6 +6,18 @@
   var hamburger = document.querySelector('.hamburger');
   var defaultTitle = "Team Canada 1972";
 
+  function findScollLinks(){
+    var scrollingLinks = document.querySelectorAll('.scroller');
+    if(scrollingLinks[0]!=null){
+      for(b of scrollingLinks){
+        b.addEventListener('click',function(e){
+          e.preventDefault();
+          goTo(document.querySelector(e.currentTarget.getAttribute('href')));
+        },false);
+      }
+    }
+  }
+
   function ajaxPage(pageObject){
     var xhttp = new XMLHttpRequest();
      xhttp.onreadystatechange = function() {
@@ -16,6 +28,7 @@
           mainContainer.innerHTML = response;
           TweenLite.to(mainContainer,0.5,{opacity:1});
           assignLinks();
+          findScollLinks();
           var script = document.createElement('script');
           script.src = "js/" + pageObject.name + ".js";
           document.head.appendChild(script);
@@ -81,4 +94,5 @@ hamburger.addEventListener('click',function(e){
   toggleMenu();
 },false);
 assignLinks();
+findScollLinks();
 })();
