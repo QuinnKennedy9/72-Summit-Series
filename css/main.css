@@ -723,6 +723,29 @@ footer {
       box-sizing: border-box;
       transition: all ease 0.5s; }
 
+#partners {
+  background: url("../img/ACTION-5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  #partners #upperPartner {
+    padding-top: 5em;
+    margin-left: 9em; }
+  #partners #lowerPartner {
+    margin-top: 5em;
+    margin-left: 15em;
+    margin-bottom: 5em; }
+  #partners .partnerImage {
+    height: 11.5em;
+    width: 11.5em;
+    margin-left: 1.25em;
+    margin-right: 1.25em;
+    -webkit-box-shadow: 0px 4px 42px -8px white;
+    -moz-box-shadow: 0px 4px 42px -8px white;
+    box-shadow: 0px 4px 42px -8px white; }
+  #partners #partnerButton {
+    margin-bottom: 6em; }
+
 @media only screen and (min-width: 40em) {
   header h1 {
     display: block; }
@@ -745,3 +768,5 @@ footer {
     top: 24rem; }
   #splash .back-video video {
     display: block; } }
+
+/*# sourceMappingURL=main.css.map */
