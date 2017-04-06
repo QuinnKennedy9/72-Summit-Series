@@ -1,7 +1,7 @@
 <?php $page = 'dashboard';
-if($_SESSION["loggedIn"] !== "true"){
-    header("Location: login");
-}else{
+if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
   $loggedIn = "true";
+}else{
+  header("Location: login");
 }
 ?>

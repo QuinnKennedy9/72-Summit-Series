@@ -21,6 +21,7 @@ function TrollScroll(el,params){
     upOrDown = 1;
   }
   function parallax(element){
+    console.log(orgTop);
       var scrollit = parseInt(orgTop) + upOrDown*(scrollTop*speed/100);
       if(scrollit > stop && stop!=null){
         element.style.top = stop + "px";
@@ -30,6 +31,7 @@ function TrollScroll(el,params){
   }
   window.addEventListener('scroll',function(){
     parallax(element);
+    // console.log(element);
   },false);
 }
 

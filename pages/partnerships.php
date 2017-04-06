@@ -10,7 +10,9 @@
   <div class="dark-overlay"></div>
   <div class="back-img"></div>
 </section>
-<section id="partners">
+<section id="partners" class="dark-overlay">
+  <div class="inner">
+
 <div id="upperPartner">
   <h3 class="hidden">Top Row of Partners</h3>
     <a href="http://www.amusic.mu/" target="_blank"><img src="img/amusic.jpeg" alt="A Music" class="partnerImage"></a>
@@ -27,5 +29,6 @@
     <a href="https://lexcor.ca/" target="_blank"><img src="img/lexcor-logo.png" alt="Lexcor" class="partnerImage"></a>
 </div>
 <a href="contact" id="partnerButton" class="button">Become A Partner</a>
+</div>
 <div>_</div>
 </section>

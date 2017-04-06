@@ -51,14 +51,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                  $i_tags = format($_POST['i_tags']);
                  $i_desc = format($_POST['i_desc']);
                   $i_src = "img/uploads/gallery/".$file_name;
+                  $i_hide = 0;
+                  $sql = "INSERT INTO `gallery_images` (`id`, `i_tags`, `i_src`, `i_title`, `i_desc`, `hide`) VALUES (NULL, '".$i_tags."', '".$i_src."', '".$i_title."', '".$i_desc."', '0')";
 
-                 $sql = "INSERT INTO `gallery_images` (`id`, `i_albums`, `i_tags`, `i_src`, `i_title`, `i_desc`) VALUES (NULL, NULL, '$i_tags', '$i_src', '$i_title', '$i_desc')";
+                //  $sql = "INSERT INTO `gallery_images` (`i_tags`, `i_src`, `i_title`, `i_desc`, `hide`) VALUES ($i_tags, $i_src, $i_title, $i_desc, $i_hide)";
                  $result = $conn->query($sql);
                    echo "<script>alert('Your image has been successfully uploaded.');</script>";
                    header("Location: gallery");
                   // INSERT INTO `blogposts` (`id`, `p_title`, `p_date`, `p_time`, `p_content`, `p_img_src`, `p_tags`) VALUES (NULL, 'title', '2017-03-31', CURRENT_TIMESTAMP, 'text', 'imgsrc', 'tag,tags,the,tags');
                   // INSERT INTO `gallery_images` (`id`, `i_albums`, `i_tags`, `i_src`, `i_title`, `i_desc`) VALUES (NULL, NULL, 'tags', 'src', 'title', 'description');
               }else{
+                echo "<script>alert('Your image was not uploaded.');</script>";
         //  print_r($errors);
       }
 }

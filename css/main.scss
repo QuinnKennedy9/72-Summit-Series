@@ -576,6 +576,7 @@ footer{
             margin: 0 auto;
             width:100%;
             max-width: 30em;
+            min-height: 30em;
             background: $red;
             color:$white;
             padding:3em 2em;
@@ -745,10 +746,15 @@ footer{
 }
 
 #partners{
+  position: relative;
   background: url('../img/ACTION-5.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: -1;
+  .inner{
+    z-index: 1;
+  }
   #upperPartner{
     padding-top: 5em;
     margin-left: 9em;

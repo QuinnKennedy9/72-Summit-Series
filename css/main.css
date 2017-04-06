@@ -808,6 +808,7 @@ footer {
         margin: 0 auto;
         width: 100%;
         max-width: 30em;
+        min-height: 30em;
         background: #cc1515;
         color: #fff;
         padding: 3em 2em;
@@ -954,10 +955,14 @@ footer {
       border: medium solid #aa0e0e; }
 
 #partners {
+  position: relative;
   background: url("../img/ACTION-5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  z-index: -1; }
+  #partners .inner {
+    z-index: 1; }
   #partners #upperPartner {
     padding-top: 5em;
     margin-left: 9em; }
@@ -997,7 +1002,6 @@ footer {
     font-size: 1.5rem;
     top: 24rem; }
   #splash .back-video video {
-
     display: block; }
 
   #gallery .inner {
@@ -1072,4 +1076,3 @@ footer {
                 border-bottom: medium solid #fff;
                 top: 50%;
                 position: absolute; } }
-

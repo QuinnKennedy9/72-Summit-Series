@@ -1,6 +1,6 @@
 <?php
 $page = 'login';
-if($_SESSION["loggedIn"] === "true"){
+if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
   header("Location: dashboard");
   $loggedIn = "true";
 }
