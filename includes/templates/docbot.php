@@ -1,3 +1,4 @@
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 <script src="js/classList.js"></script>
 <!-- the above is backfill for the absence of the classList attribute in IE8 & 9 -->
 <script src="js/CSSPlugin.js"></script>

@@ -5,6 +5,7 @@ if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
  ?>
 <section id="splash" class="dark-overlay">
   <div class="banner">BLOG<div class="back"></div></div>
+  <br>
   <h4 class="subheading">SHARING THE STORY, EVERYDAY</h4>
   <a id="viewMore" href="#gallery" class="scroller white button">Read</a>
   <!-- <div class="dark-overlay"></div> -->
