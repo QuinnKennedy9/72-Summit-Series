@@ -37,7 +37,8 @@
     $limit = 4;
     $end = $limit * ($currentPage-1);
     $noResults=0;
-    $sql = "SELECT * FROM `gallery_images` LIMIT $limit OFFSET $end";
+    // $sql = "SELECT * FROM `gallery_images` LIMIT $limit OFFSET $end";
+    $sql = "SELECT * FROM `gallery_images`";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
@@ -53,7 +54,7 @@
     }
      ?>
 
-<div class="buttons">
+<div class="buttons hidden">
   <?php if($currentPage>$limit){echo '<a href="gallery?page=1" class="gallajax pageButton">First Page</a>';}?>
   <?php if($currentPage>1){echo '<a href="gallery?page='.($currentPage-1).'" class="gallajax pageButton">Prev</a>';}?>
   <?php for($i=$currentPage+1;$i<5;$i++):?>
