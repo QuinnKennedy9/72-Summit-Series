@@ -1067,6 +1067,13 @@ footer {
   background-size: cover;
   background-position: center; }
 
+#intro {
+  width: 70%;
+  text-align: center;
+  margin-left: 11.25em;
+  font-size: 1.5em;
+  padding-top: 5em; }
+
 @media only screen and (min-width: 40em) {
   header h1 {
     display: block; }
@@ -1157,3 +1164,5 @@ footer {
 @media only screen and (min-width: 60em) {
   #splash .banner #logo {
     max-width: 12rem; } }
+
+/*# sourceMappingURL=main.css.map */
