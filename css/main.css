@@ -617,7 +617,8 @@ footer {
       text-shadow: 0.4rem 0.4rem 0.2rem rgba(0, 0, 0, 0.5);
       margin-top: 0.5em;
       padding-top: 0.1em;
-      line-height: 0.2em; }
+      line-height: 0.2em;
+      text-transform: uppercase; }
     #splash .banner .back {
       background-color: #cc1515;
       width: 100%;
@@ -870,6 +871,13 @@ footer {
             #timeline .inner .timelineCont .half.right ul li ul li a {
               background: #aa0e0e;
               border-bottom: thin solid #cc1515; }
+
+#portal {
+  min-height: 40em;
+  background: url("../img/ACTION-5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
 
 #partnerships {
   position: relative;
