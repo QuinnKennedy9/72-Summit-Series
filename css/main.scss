@@ -786,6 +786,67 @@ footer{
   @include back-img("history_back.jpg");
 }
 
+#team{
+  position: relative;
+  @include back-img('ACTION-5.jpg');
+  .inner{
+    padding: 4em 0;
+    max-width: 80em;
+    margin:0 auto;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    .player{
+      margin:1.5em 2em;
+      width:90%;
+      max-width: 30em;
+      display: inline-block;
+      background: $red;
+      box-sizing: border-box;
+      .left{
+        box-sizing: border-box;
+        height:100%;
+        float: left;
+        width:40%;
+        position: relative;
+        img{
+          width:100%;
+        }
+        .num{
+          font-family: $font-stack-header;
+          font-size: 2rem;
+          position: absolute;
+          bottom:0;
+          width:100%;
+          right:0;
+          text-align: center;
+          background: transparentize($red-dark,0.5);
+        }
+
+      }
+      .right{
+        box-sizing: border-box;
+        float: left;
+        width:60%;
+        .name{
+          font-family: $font-stack-header;
+          font-size: 2rem;
+          padding: 0.5em 0;
+          text-align: center;
+          background: $red-dark;
+          display: block;
+          text-transform: uppercase;
+          width:100%;
+        }
+        .description{
+          padding:0.5em;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
 #partners{
   position: relative;
   @include back-img('ACTION-5.jpg');

@@ -979,6 +979,60 @@ footer {
   background-size: cover;
   background-position: center; }
 
+#team {
+  position: relative;
+  background: url("../img/ACTION-5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  #team .inner {
+    padding: 4em 0;
+    max-width: 80em;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+    text-align: center; }
+    #team .inner .player {
+      margin: 1.5em 2em;
+      width: 90%;
+      max-width: 30em;
+      display: inline-block;
+      background: #cc1515;
+      box-sizing: border-box; }
+      #team .inner .player .left {
+        box-sizing: border-box;
+        height: 100%;
+        float: left;
+        width: 40%;
+        position: relative; }
+        #team .inner .player .left img {
+          width: 100%; }
+        #team .inner .player .left .num {
+          font-family: "Teko", "Open Sans", sans-serif;
+          font-size: 2rem;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          right: 0;
+          text-align: center;
+          background: rgba(170, 14, 14, 0.5); }
+      #team .inner .player .right {
+        box-sizing: border-box;
+        float: left;
+        width: 60%; }
+        #team .inner .player .right .name {
+          font-family: "Teko", "Open Sans", sans-serif;
+          font-size: 2rem;
+          padding: 0.5em 0;
+          text-align: center;
+          background: #aa0e0e;
+          display: block;
+          text-transform: uppercase;
+          width: 100%; }
+        #team .inner .player .right .description {
+          padding: 0.5em;
+          display: block; }
+
 #partners {
   position: relative;
   background: url("../img/ACTION-5.jpg");
