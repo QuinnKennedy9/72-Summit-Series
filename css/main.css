@@ -753,7 +753,7 @@ footer {
   background-position: center;
   box-sizing: border-box;
   padding: 1em;
-  min-height: 44em; }
+  min-height: 50em; }
   #blog .inner {
     box-sizing: border-box;
     max-width: 60em;
@@ -764,15 +764,16 @@ footer {
     #blog .inner .post {
       display: inline-block;
       margin: 1em;
-      max-width: 20em;
       position: relative;
       background: #cc1515;
-      max-height: 20em;
-      padding: 2em;
-      box-sizing: border-box; }
+      height: 20em;
+      width: 20em;
+      box-sizing: border-box;
+      cursor: pointer; }
       #blog .inner .post .delete {
         display: none; }
       #blog .inner .post .postHeader {
+        z-index: 2;
         position: absolute;
         top: 35%;
         left: 0;
@@ -780,7 +781,7 @@ footer {
         text-align: center;
         opacity: 1.0;
         transition: all ease 1s;
-        background: rgba(170, 14, 14, 0.5);
+        background: rgba(170, 14, 14, 0.9);
         padding: 1em;
         box-sizing: border-box; }
       #blog .inner .post img {
@@ -788,22 +789,28 @@ footer {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        transition: all ease 1s; }
       #blog .inner .post .content {
         margin: 0;
         display: block;
-        padding: 2em;
+        padding: 1em;
         box-sizing: border-box;
         overflow-y: hidden;
         text-overflow: ellipsis;
         opacity: 0.0;
         overflow-y: hidden;
-        height: 15em;
-        transition: all ease 1s; }
+        height: 20em;
+        transition: all ease 1s;
+        overflow: hidden;
+        position: relative;
+        z-index: 2; }
       #blog .inner .post:hover .content {
         opacity: 1.0; }
       #blog .inner .post:hover .postHeader {
         opacity: 0.0; }
+      #blog .inner .post:hover img {
+        opacity: 0.2; }
 
 #gallery {
   box-sizing: border-box;

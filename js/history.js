@@ -8,47 +8,47 @@ var currentEvent = null;
 //
 var filler = {
   "beforeTheSeries" : {
-      "img":"imgsrc.jpg",
+      "img":"ACTION-5.jpg",
       "text":"text! text, text text."
     },
   "duringTheSeries" : {
-      "img":"imgsrc.jpg",
+      "img":"ACTION-12.jpg",
       "text":"text! text, text text."
     },
   "gameOne" : {
-      "img":"imgsrc.jpg",
+      "img":"ACTION-9.jpg",
       "text":"text! text, text text."
     },
   "gameTwo" : {
-      "img":"imgsrc.jpg",
+      "img":"ACTION-1.jpg",
       "text":"text! text, text text."
     },
   "gameThree" : {
-      "img":"imgsrc.jpg",
+      "img":"ACTION-9.jpg",
       "text":"text! text, text text."
     },
   "gameFour" : {
-      "img":"imgsrc.jpg",
+      "img":"ACTION-1.jpg",
       "text":"text! text, text text."
     },
   "gameFive" : {
-      "img":"imgsrc.jpg",
+      "img":"ACTION-9.jpg",
       "text":"text! text, text text."
     },
   "gameSix" : {
-      "img":"imgsrc.jpg",
+      "img":"ACTION-9.jpg",
       "text":"text! text, text text."
     },
   "gameSeven" : {
-      "img":"imgsrc.jpg",
+      "img":"ACTION-9.jpg",
       "text":"text! text, text text."
     },
   "gameEight" : {
-      "img":"imgsrc.jpg",
+      "img":"ACTION-9.jpg",
       "text":"text! text, text text."
     },
   "afterTheSeries" : {
-      "img":"imgsrc.jpg",
+      "img":"ACTION-5.jpg",
       "text":"text! text, text text."
     }
 }
@@ -111,12 +111,12 @@ function loadContent(it){
   var text = filler[it.id].text;
   var imgsrc = filler[it.id].img;
   var modal = document.querySelector('#timeline .modal');
-  var desc = modal.querySelector('.desc');
+  var desc = modal.querySelector('#timelineContent');
   var img = modal.querySelector('img');
   TweenLite.to(img,0.5,{opacity:0});
   TweenLite.to(desc,0.5,{opacity:0,onComplete:function(){
     desc.innerHTML = text;
-    img.src = imgsrc;
+    img.src = "img/"+imgsrc;
     TweenLite.to(desc,0.5,{opacity:1,delay:0.1});
     TweenLite.to(img,0.5,{opacity:1,delay:0.1});
   }});

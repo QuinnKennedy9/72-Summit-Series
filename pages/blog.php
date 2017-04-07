@@ -13,7 +13,7 @@ if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
     </div>
   <div class="callToAction">
     <h4 class="subheading">SHARING THE STORY, EVERYDAY</h4>
-    <a id="viewMore" href="#gallery" class="scroller white button">Read</a>
+    <a id="viewMore" href="#blog" class="scroller white button">Read</a>
   </div>
 </div>
 </div>
