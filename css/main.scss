@@ -657,11 +657,6 @@ footer{
   }
 }
 
-#partnerships{
-  position: relative;
-  padding:2em;
-  @include back-img('ACTION-5.jpg');
-}
 .placeholder{
   position: relative;
   width:100%;
@@ -793,36 +788,30 @@ footer{
 
 #partners{
   position: relative;
-  background: url('../img/history_back.jpg');
+  @include back-img('ACTION-5.jpg');
   padding-bottom: 6em;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
   .inner{
+    box-sizing: border-box;
     z-index: 1;
-  }
-  #upperPartner{
-    padding-top: 5em;
-    margin-left: 10%;
-  }
-  #lowerPartner{
-    margin-top: 1em;
-    margin-left: 10%;
-    margin-bottom: 5em;
-  }
+    text-align: center;
+    padding:2em;
+    width:100%;
+    margin:0 auto;
+    max-width: 40em;
+    padding-top: 6em;
   .partnerImage{
     border-radius: 1em;
     margin-bottom:2em;
-    display: inline;
-    height:5em;
-    width:5em;
+    display: inline-block;
+    width:90%;
+    max-width: 10em;
     margin-left: .5em;
     margin-right: .5em;
     -webkit-box-shadow: 0px 4px 42px -8px rgba(255,255,255,1);
     -moz-box-shadow: 0px 4px 42px -8px rgba(255,255,255,1);
     box-shadow: 0px 4px 42px -8px rgba(255,255,255,1);
   }
+}
 }
 #formSection{
   padding-top: 5em;
@@ -990,25 +979,6 @@ footer{
   //       overflow:hidden;;
   //     }
   // }
-  h3{
-    display: inline;
-    margin-left: 1.5em;
-    font-size: 2em;
-    position: relative;
-    margin-left: 1.5em;
-    font-size: 4em;
-  }
-  .partnerImage{
-    display: inline !important;
-    height: 6em !important;
-    width:6em !important;
-  }
-  #upperPartner{
-    margin-left: 15% !important;
-  }
-  #lowerPartner{
-    margin-left: 15% !important;
-  }
 
   header{
     h1{
@@ -1185,17 +1155,6 @@ footer{
     //   border-radius: 1em;
     //   height: 38em;
     // }
-  }
-  .partnerImage{
-    display: inline !important;
-    height: 10em !important;
-    width:10em !important;
-  }
-  #upperPartner{
-    margin-left: 20% !important;
-  }
-  #lowerPartner{
-    margin-left: 26% !important;
   }
   #splash{
     .banner{
