@@ -327,14 +327,16 @@ footer{
     text-align: center;
     width:100%;
     box-sizing: border-box;
-    z-index: 3;
-    margin-top:8em;
+    margin-top:20vh;
     // transition: all ease 0.5s;
     #logo{
       max-width: 10rem;
       width:50%;
       display: block;
       margin:0 auto;
+    }
+    .spacer{
+      height:5em;
     }
     .fitText{
       font-family: $font-stack-header;
@@ -352,11 +354,11 @@ footer{
     }
     .callToAction{
       margin:0 auto;
-      margin-top: 2em;
+      margin-top: 4em;
       width:80%;
       position: relative;
       z-index: 90;
-      font-size: 0.5em;
+      font-size: 1.2em;
       // transition: all ease 0.5s;
       .tagline{
         // font-size: 0.5em;
@@ -369,29 +371,30 @@ footer{
         padding:0.2em;
         margin-bottom:1em;
       }
+      .subheading{
+        text-align: center;
+        width:100%;
+        font-weight: 700;
+        margin:0;
+        margin-bottom:1em;
+        font-family: $font-reg;
+        color:#fff;
+        z-index: 1;
+        position: relative;
+        font-size: 1.5rem;
+        padding:0 1em;
+        box-sizing: border-box;
+        .in{
+          max-width: 20em;
+          margin:0 auto;
+        }
+      }
+    }
+    .button{
+      font-size: 1.2rem;
     }
   }
-  .subheading{
-    text-align: center;
-    width:100%;
-    font-weight: 700;
-    margin:0;
-    font-family: $font-reg;
-    color:#fff;
-    z-index: 1;
-    position: absolute;
-    font-size: 1.5rem;
-    padding:0 1em;
-    box-sizing: border-box;
-    top:18rem;
-    .in{
-      max-width: 20em;
-      margin:0 auto;
-    }
 
-    // transition: all ease 0.5s;
-    //
-  }
   #toggleSound{
     display: none;
     color:#ffffff;
@@ -399,6 +402,14 @@ footer{
     position: fixed;
     bottom:3em;
     right: 2em;
+    img{
+      opacity: 0.5;
+      width:2em;
+      height:auto;
+      &:hover{
+        opacity: 1.0;
+      }
+    }
   }
 }
 .dark-overlay{
@@ -422,7 +433,7 @@ footer{
 
 #viewMore{
   position: relative;
-  top:30em;
+  margin-top: 2em;
   z-index: 10;
 }
 
@@ -724,16 +735,22 @@ footer{
 }
 
 #loginForm{
-  width:100%;
+  display: block;
+  width:90%;
   max-width: 22em;
   margin:0 auto;
-  margin-top: 26em;
+  margin-top: 4em;
   label{
     float: left;
+    // clear: both;
     padding:0.5em 0.75em;
     margin-top: 1em;
+    padding-left: 0;
   }
   input{
+    // width:100%;
+    // float: left;
+    // clear: both;
     float: right;
     clear: right;
     color:$white;
@@ -755,6 +772,22 @@ footer{
       border:medium solid $red-dark;
     }
   }
+}
+
+#dash-links{
+  margin-top: 4em;
+  a{
+    display: block;
+    text-decoration: none;
+    color:$white;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+#gallery-upload{
+  min-height: 60em;
+  @include back-img("history_back.jpg");
 }
 
 #partners{
@@ -926,12 +959,9 @@ footer{
 @media only screen and (min-width:60em){
   #splash{
     .banner{
-      margin-top:12em;
+      // margin-top:8em;
       #logo{
-        max-width: 14rem;
-      }
-      .callToAction{
-        font-size: 2em;
+        max-width: 12rem;
       }
     }
   }

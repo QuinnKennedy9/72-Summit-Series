@@ -2,14 +2,22 @@
 <section id="splash" class="">
   <h2 class="hidden">Partners</h2>
   <div id="fade">
-  <div class="banner">Our Partners<div class="back"></div></div>
+  <div class="banner">
+    <!-- <img id="logo" src="img/logo.png" alt=""> -->
+    <div class="spacer"></div>
+    <div class="back">
+    <div class="fitText">OUR PARTNERS</div>
+    </div>
   <div class="callToAction">
-    <div class="tagline">The 28,800 foundation is possible due to the generous contributions of our partners</div>
-    <a href="#partnerships" class="scroller white arrow">SCROLL</a>
+    <h4 class="subheading">The 28,800 foundation is possible due to the generous contributions of our partners.</h4>
+    <a href="#partners" class="scroller white arrow">SCROLL</a>
   </div>
-  <div class="dark-overlay"></div>
-  <div class="back-img"></div>
+</div>
+  <div class="dark-overlay darker"></div>
+</div>
+<div class="back-img"></div>
 </section>
+
 <section id="partners" class="dark-overlay">
   <div class="inner">
 
@@ -30,5 +38,4 @@
 </div>
 <a href="contact" id="partnerButton" class="button">Become A Partner</a>
 </div>
-<div>_</div>
 </section>

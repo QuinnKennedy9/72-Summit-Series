@@ -1,4 +1,5 @@
 (function(){
+var g = new TrollScroll(document.querySelector('.banner'),{speed:70});
 var timeline = document.querySelector('#timeline');
 var topLevelEvents = timeline.querySelectorAll('#events a.tl');
 var innerLevelEvents = timeline.querySelectorAll('#events .dropdown a');

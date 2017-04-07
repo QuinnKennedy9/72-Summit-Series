@@ -40,6 +40,7 @@ function fitTheTexts(){
           script.src = "js/" + pageObject.name + ".js";
           document.head.appendChild(script);
           fitTheTexts();
+          window.scroll(0,0);
         }})
       }
      };

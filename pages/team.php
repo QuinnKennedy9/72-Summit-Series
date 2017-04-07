@@ -1,17 +1,25 @@
 <?php
 $page = 'team';
 ?>
-<section id="splash">
-  <div class="banner">THE TEAM<div class="back"></div></div>
-  <h4 class="subheading">TOGETHER EVERY MINUTE</h4>
+<section id="splash" class="">
+  <h2 class="hidden">The Team</h2>
+  <div id="fade">
+  <div class="banner">
+    <!-- <img id="logo" src="img/logo.png" alt=""> -->
+    <div class="spacer"></div>
+    <div class="back">
+    <div class="fitText">THE TEAM</div>
+    </div>
   <div class="callToAction">
-    <br><br><br>
-    <br><br><br>
+    <h4 class="subheading">TOGETHER EVERY MINUTE</h4>
     <a href="#timeline" class="scroller white arrow">SCROLL</a>
   </div>
-  <div class="dark-overlay"></div>
-  <div class="back-img"></div>
+</div>
+  <div class="dark-overlay darker"></div>
+</div>
+<div class="back-img"></div>
 </section>
+
 <section id="timeline">
   <div class="placeholder"></div>
 </section>

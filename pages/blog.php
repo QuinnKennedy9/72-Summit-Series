@@ -1,16 +1,26 @@
-<?php $page = "gallery";
+<?php $page = "blog";
 if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
   $loggedIn = "true";
 }
  ?>
-<section id="splash" class="dark-overlay">
-  <div class="banner">BLOG<div class="back"></div></div>
-  <br>
-  <h4 class="subheading">SHARING THE STORY, EVERYDAY</h4>
-  <a id="viewMore" href="#gallery" class="scroller white button">Read</a>
-  <!-- <div class="dark-overlay"></div> -->
-  <div class="back-img"></div>
+<section id="splash" class="">
+  <div id="fade">
+  <div class="banner">
+    <!-- <img id="logo" src="img/logo.png" alt=""> -->
+    <div class="spacer"></div>
+    <div class="back">
+    <div class="fitText">BLOG</div>
+    </div>
+  <div class="callToAction">
+    <h4 class="subheading">SHARING THE STORY, EVERYDAY</h4>
+    <a id="viewMore" href="#gallery" class="scroller white button">Read</a>
+  </div>
+</div>
+  <div class="dark-overlay darker"></div>
+</div>
+<div class="back-img"></div>
 </section>
+
 <section id="gallery" class="dark-overlay">
   <!-- <div class="dark-overlay"></div> -->
   <div class="inner clearfix">

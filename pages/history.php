@@ -1,15 +1,23 @@
 <?php $page = "history" ?>
-<section id="splash">
-  <div class="banner">HISTORY<div class="back"></div></div>
-  <h4 class="subheading">1972 SUMMIT SERIES AND BEYOND</h4>
+<section id="splash" class="">
+  <h2 class="hidden">History</h2>
+<div id="fade">
+  <div class="banner">
+    <!-- <img id="logo" src="img/logo.png" alt=""> -->
+    <div class="spacer"></div>
+    <div class="back">
+    <div class="fitText">HISTORY</div>
+    </div>
   <div class="callToAction">
-    <br><br><br>
-    <br><br><br>
+    <h4 class="subheading">1972 SUMMIT SERIES AND BEYOND</h4>
     <a href="#timeline" class="scroller white arrow">SCROLL</a>
   </div>
-  <div class="dark-overlay"></div>
-  <div class="back-img"></div>
+</div>
+  <div class="dark-overlay darker"></div>
+</div>
+<div class="back-img"></div>
 </section>
+
 <section id="timeline">
   <h2>TIMELINE</h2>
   <div class="inner">
