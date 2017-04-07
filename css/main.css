@@ -745,7 +745,68 @@ footer {
     .button.white:hover {
       background-color: rgba(255, 255, 255, 0.2); }
 
+#blog {
+  position: relative;
+  background: url("../img/ACTION-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  padding: 1em;
+  min-height: 44em; }
+  #blog .inner {
+    box-sizing: border-box;
+    max-width: 60em;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 4em; }
+    #blog .inner .post {
+      display: inline-block;
+      margin: 1em;
+      max-width: 20em;
+      position: relative;
+      background: #cc1515;
+      max-height: 20em;
+      padding: 2em;
+      box-sizing: border-box; }
+      #blog .inner .post .delete {
+        display: none; }
+      #blog .inner .post .postHeader {
+        position: absolute;
+        top: 35%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        opacity: 1.0;
+        transition: all ease 1s;
+        background: rgba(170, 14, 14, 0.5);
+        padding: 1em;
+        box-sizing: border-box; }
+      #blog .inner .post img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+      #blog .inner .post .content {
+        margin: 0;
+        display: block;
+        padding: 2em;
+        box-sizing: border-box;
+        overflow-y: hidden;
+        text-overflow: ellipsis;
+        opacity: 0.0;
+        overflow-y: hidden;
+        height: 15em;
+        transition: all ease 1s; }
+      #blog .inner .post:hover .content {
+        opacity: 1.0; }
+      #blog .inner .post:hover .postHeader {
+        opacity: 0.0; }
+
 #gallery {
+  box-sizing: border-box;
   position: relative;
   min-height: 44em;
   padding: 1em;
@@ -767,8 +828,10 @@ footer {
     margin: 1em;
     box-sizing: border-box; }
     #gallery .image img {
-      width: 100%;
-      max-width: 20em; }
+      width: auto;
+      height: auto;
+      max-width: 20em;
+      max-height: 14em; }
     #gallery .image .imageHeader {
       position: absolute;
       width: 100%;

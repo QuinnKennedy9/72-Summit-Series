@@ -20,7 +20,7 @@ if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
 <div class="back-img"></div>
 </section>
 
-<section id="gallery" class="dark-overlay">
+<section id="blog" class="dark-overlay">
   <!-- <div class="dark-overlay"></div> -->
   <div class="inner clearfix">
     <!-- INSERT GALLERY IMAGES -->
@@ -45,11 +45,17 @@ if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
-        echo '<div class="image">';
+        echo '<div class="post">';
         if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
           echo '<a class="delete" href="blog-delete?id='.$row['id'].'">X</a>';
         }
-        echo '<h3 class="imageHeader">'.$row['p_title'].'</h3><img src="'.$row['p_img_src'].'" alt="'.$row['p_content'].'"><p>'.$row['p_content'].'</p></div>';
+        echo '<h3 class="postHeader">'.$row['p_title'].'</h3>';
+        if($row['p_img_src']!=NULL){
+          echo '<img src="'.$row['p_img_src'].'" alt="'.$row['p_content'].'">';
+        }else{
+          echo '<img src="img/uploads/blog/default.png" alt="post">';
+        }
+        echo '<p class="content">'.$row['p_content'].'</p></div>';
         $noResults++;
       }
     } else {

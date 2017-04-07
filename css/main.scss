@@ -502,7 +502,76 @@ footer{
   }
 }
 
+#blog{
+  position: relative;
+  @include back-img('ACTION-1.jpg');
+  box-sizing: border-box;
+  padding:1em;
+  min-height: 44em;
+  .inner{
+    box-sizing: border-box;
+    max-width: 60em;
+    margin:0 auto;
+    width:100%;
+    text-align: center;
+    padding-top:4em;
+    .post{
+      display: inline-block;
+      margin: 1em;
+      max-width: 20em;
+      position: relative;
+      background: $red;
+      max-height: 20em;
+      padding:2em;
+      box-sizing: border-box;
+      .delete{
+        display: none;
+      }
+      .postHeader{
+        position: absolute;
+        top:35%;
+        left:0;
+        width:100%;
+        text-align: center;
+        opacity: 1.0;
+        transition: all ease 1s;
+        background: transparentize($red-dark, 0.5);
+        padding: 1em;
+        box-sizing: border-box;
+      }
+      img{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+      }
+      .content{
+        margin:0;
+        display: block;
+        padding:2em;
+        box-sizing: border-box;
+        overflow-y:hidden;
+        text-overflow: ellipsis;
+        opacity: 0.0;
+        overflow-y: hidden;
+        height:15em;
+        transition: all ease 1s;
+      }
+      &:hover{
+      .content{
+        opacity: 1.0;
+      }
+      .postHeader{
+        opacity: 0.0;
+      }
+      }
+    }
+  }
+}
+
 #gallery{
+  box-sizing: border-box;
   position: relative;
   min-height: 44em;
   padding:1em;
@@ -524,8 +593,11 @@ footer{
     box-sizing: border-box;
     // width:80%;
     img{
-      width:100%;
+      // width:100%;
+      width:auto;
+      height:auto;
       max-width:20em;
+      max-height: 14em;
     }
     .imageHeader{
       position: absolute;
