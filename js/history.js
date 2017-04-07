@@ -56,7 +56,7 @@ var rand = bphotos[Math.floor(Math.random() * bphotos.length)];
 var background = document.querySelector(".back-img");
 
 function randBack(){
-  document.querySelector(".back-img").style.backgroundImage="url(../img/"+rand+")";
+  document.querySelector(".back-img").style.backgroundImage="url(img/"+rand+")";
   console.log(background.src)
 }
 
