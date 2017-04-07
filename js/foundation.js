@@ -16,16 +16,16 @@ function randBack(){
   document.querySelector(".back-img").style.backgroundImage="url(img/"+rand+")";
   console.log(background.src)
 }
-function swap1(){
+function swap1(event){
   console.log(mainT)
   event.preventDefault();
   mainT.innerHTML = swapText[0];
 }
-function swap2(){
+function swap2(event){
   event.preventDefault();
   mainT.innerHTML = swapText[1];
 }
-function swap3(){
+function swap3(event){
   event.preventDefault();
   mainT.innerHTML = swapText[2];
 }

@@ -42,6 +42,7 @@ function TrollScroll(el,params){
 }
 
 function goTo(el){
+  var scrollingTimeout;
   var s = window.getComputedStyle(el);
   elTop = el.offsetTop;
   var diff = 0;
@@ -68,10 +69,13 @@ function goTo(el){
         }
       }
       window.scroll(0,scrollTop+(totalScroll/100*easeScroll));
-      setTimeout(scroll,2);
+      scrollingTimeout = setTimeout(scroll,2);
     }
   }
   scroll();
+  window.addEventListener('wheel',function(){
+    clearTimeout(scrollingTimeout);
+  },false);
 }
 
 
