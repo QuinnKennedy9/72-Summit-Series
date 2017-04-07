@@ -996,7 +996,8 @@ footer {
 
 #partners {
   position: relative;
-  background: url("../img/ACTION-5.jpg");
+  background: url("../img/history_back.jpg");
+  padding-bottom: 6em;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1005,24 +1006,26 @@ footer {
     z-index: 1; }
   #partners #upperPartner {
     padding-top: 5em;
-    margin-left: 9em; }
+    margin-left: 32%; }
   #partners #lowerPartner {
-    margin-top: 5em;
-    margin-left: 15em;
+    margin-top: 1em;
+    margin-left: 32%;
     margin-bottom: 5em; }
   #partners .partnerImage {
-    height: 11.5em;
-    width: 11.5em;
-    margin-left: 1.25em;
-    margin-right: 1.25em;
+    border-radius: 1em;
+    margin-bottom: 2em;
+    display: block;
+    height: 8em;
+    width: 8em;
+    margin-left: .5em;
+    margin-right: .5em;
     -webkit-box-shadow: 0px 4px 42px -8px white;
     -moz-box-shadow: 0px 4px 42px -8px white;
     box-shadow: 0px 4px 42px -8px white; }
-  #partners #partnerButton {
-    margin-bottom: 6em; }
 
 #formSection {
   padding-top: 5em;
+  padding-bottom: 10em;
   background: url("../img/history_back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1057,24 +1060,64 @@ footer {
       padding: 0.5em 1.75em;
       background: #cc1515;
       border: medium solid #aa0e0e; }
-  #formSection textarea {
-    width: 100%;
+  #formSection #message {
+    width: 80%;
+    height: 10em;
     display: block; }
 
 #portal {
   background: url("../img/history_back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
-
-#intro {
-  width: 70%;
-  text-align: center;
-  margin-left: 11.25em;
-  font-size: 1.5em;
-  padding-top: 5em; }
+  background-position: center;
+  padding-bottom: 8em; }
+  #portal #intro {
+    width: 70%;
+    margin-left: 3em;
+    font-size: 1.2em;
+    padding-top: 5em; }
+  #portal #question {
+    margin-left: 3em;
+    width: 80%;
+    font-size: 1em;
+    padding-top: 1.25em;
+    border-bottom: medium solid #cc1515; }
+  #portal #portalImage {
+    width: 95%;
+    height: auto;
+    border-radius: 1em;
+    margin-bottom: 1em; }
+  #portal #portalContent {
+    padding: 2em 2em 2em 2em;
+    width: 70%;
+    margin: auto;
+    background: linear-gradient(red, #aa0e0e);
+    border-radius: 1em;
+    height: 38em; }
+  #portal h3 {
+    margin-left: 4em;
+    font-size: 1.5em; }
 
 @media only screen and (min-width: 40em) {
+  h3 {
+    float: left;
+    margin-left: 1.5em;
+    font-size: 2em;
+    position: relative;
+    margin-left: 1.5em !important;
+    font-size: 2em !important; }
+
+  .partnerImage {
+    display: inline !important;
+    height: 6em !important;
+    width: 6em !important; }
+
+  #upperPartner {
+    margin-left: 15% !important; }
+
+  #lowerPartner {
+    margin-left: 15% !important; }
+
   header h1 {
     display: block; }
   header #mainNav ul li a {
@@ -1162,6 +1205,71 @@ footer {
                 top: 50%;
                 position: absolute; } }
 @media only screen and (min-width: 60em) {
+  #intro {
+    width: 70% !important;
+    text-align: center !important;
+    margin-left: 9.5em !important;
+    font-size: 1.5em !important;
+    padding-top: 5em !important; }
+
+  h3 {
+    margin-left: 1.5em !important;
+    font-size: 2em !important; }
+
+  h3:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #cc1515;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s; }
+
+  h3:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+
+  #education {
+    margin-left: 12.25em !important; }
+
+  #question {
+    margin-left: 20em !important;
+    width: 34% !important;
+    font-size: 1.5em !important; }
+
+  #portalImage {
+    width: 80% !important;
+    height: auto;
+    margin-left: 3em !important;
+    border-radius: 1em !important;
+    margin-bottom: 1em !important; }
+
+  #portalContent {
+    clear: left !important;
+    padding: 2em 2em 2em 2em !important;
+    width: 45% !important;
+    margin: auto !important;
+    background: linear-gradient(red, #aa0e0e);
+    border-radius: 1em;
+    height: 38em; }
+
+  .partnerImage {
+    display: inline !important;
+    height: 10em !important;
+    width: 10em !important; }
+
+  #upperPartner {
+    margin-left: 20% !important; }
+
+  #lowerPartner {
+    margin-left: 26% !important; }
+
   #splash .banner #logo {
     max-width: 12rem; } }
 
