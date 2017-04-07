@@ -1,10 +1,21 @@
 <?php $page = "gallery"; ?>
-<section id="splash" class="dark-overlay">
-  <div class="banner">GALLERY<div class="back"></div></div>
-  <h4 class="subheading">VIDEOS, PHOTOS &amp; NEWS</h4>
-  <a id="viewMore" href="#gallery" class="scroller white button">View</a>
-  <!-- <div class="dark-overlay"></div> -->
-  <div class="back-img"></div>
+<section id="splash" class="">
+  <h2 class="hidden">Gallery</h2>
+<div id="fade">
+  <div class="banner">
+    <!-- <img id="logo" src="img/logo.png" alt=""> -->
+    <div class="spacer"></div>
+    <div class="back">
+    <div class="fitText">GALLERY</div>
+    </div>
+  <div class="callToAction">
+    <h4 class="subheading">VIDEOS, PHOTOS &amp; MORE</h4>
+    <a id="viewMore" href="#gallery" class="scroller white button">View</a>
+  </div>
+</div>
+  <div class="dark-overlay darker"></div>
+</div>
+<div class="back-img"></div>
 </section>
 <section id="gallery" class="dark-overlay">
   <!-- <div class="dark-overlay"></div> -->

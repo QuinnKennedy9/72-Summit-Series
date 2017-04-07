@@ -1,6 +1,6 @@
 <?php
 $page = 'login';
-if($_SESSION["loggedIn"] === "true"){
+if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
   header("Location: dashboard");
   $loggedIn = "true";
 }
@@ -45,16 +45,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
       }
       ?>
-
       <section id="splash" class="">
-        <div class="banner">LOGIN<div class="back"></div></div>
-        <form id="loginForm" action="login" method="POST">
-          <label for="user">email:</label>
-          <input id="user" name="email" type="text"><br><br>
-          <label for="pass">Passphrase:</label>
-          <input id="pass" name="password" type="password"><br>
-          <input type="submit" value="Login">
-        </form>
-        <div class="dark-overlay"></div>
-          <div class="back-img"></div>
+        <h2 class="hidden">LOGIN</h2>
+        <div id="fade">
+        <div class="banner">
+          <div class="spacer"></div>
+          <div class="back">
+          <div class="fitText">LOGIN</div>
+          </div>
+          <form id="loginForm" class="clearfix" action="login" method="POST">
+            <label for="user">Email:</label>
+            <input id="user" name="email" type="text"><br><br>
+            <label for="pass">Passphrase:</label>
+            <input id="pass" name="password" type="password"><br>
+            <input type="submit" value="Login">
+            <br><br><br><br>
+          </form>
+      </div>
+        <div class="dark-overlay darker"></div>
+      </div>
+      <div class="back-img"></div>
       </section>
+      <section></section>

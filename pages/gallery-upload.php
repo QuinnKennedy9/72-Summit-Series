@@ -51,37 +51,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                  $i_tags = format($_POST['i_tags']);
                  $i_desc = format($_POST['i_desc']);
                   $i_src = "img/uploads/gallery/".$file_name;
+                  $i_hide = 0;
+                  $sql = "INSERT INTO `gallery_images` (`id`, `i_tags`, `i_src`, `i_title`, `i_desc`, `hide`) VALUES (NULL, '".$i_tags."', '".$i_src."', '".$i_title."', '".$i_desc."', '0')";
 
-                 $sql = "INSERT INTO `gallery_images` (`id`, `i_albums`, `i_tags`, `i_src`, `i_title`, `i_desc`) VALUES (NULL, NULL, '$i_tags', '$i_src', '$i_title', '$i_desc')";
+                //  $sql = "INSERT INTO `gallery_images` (`i_tags`, `i_src`, `i_title`, `i_desc`, `hide`) VALUES ($i_tags, $i_src, $i_title, $i_desc, $i_hide)";
                  $result = $conn->query($sql);
                    echo "<script>alert('Your image has been successfully uploaded.');</script>";
                    header("Location: gallery");
                   // INSERT INTO `blogposts` (`id`, `p_title`, `p_date`, `p_time`, `p_content`, `p_img_src`, `p_tags`) VALUES (NULL, 'title', '2017-03-31', CURRENT_TIMESTAMP, 'text', 'imgsrc', 'tag,tags,the,tags');
                   // INSERT INTO `gallery_images` (`id`, `i_albums`, `i_tags`, `i_src`, `i_title`, `i_desc`) VALUES (NULL, NULL, 'tags', 'src', 'title', 'description');
               }else{
+                echo "<script>alert('Your image was not uploaded.');</script>";
         //  print_r($errors);
       }
 }
 ?>
 
-<section id="splash">
-  <div class="banner">UPLOAD<div class="back"></div></div>
-  <h4 class="subheading">UPLOAD A PHOTO TO THE GALLERY</h4>
-  <div class="dark-overlay"></div>
-  <div class="back-img"></div>
+<section id="splash" class="">
+  <h2 class="hidden">Upload to Gallery</h2>
+<div id="fade">
+  <div class="banner">
+    <!-- <img id="logo" src="img/logo.png" alt=""> -->
+    <div class="spacer"></div>
+    <div class="back">
+    <div class="fitText">GALLERY UPLOAD</div>
+    </div>
+  <div class="callToAction">
+    <h4 class="subheading">UPLOAD A PHOTO TO THE GALLERY</h4>
+    <a id="viewMore" href="#gallery-upload" class="scroller white arrow">Scroll</a>
+  </div>
+</div>
+  <div class="dark-overlay darker"></div>
+</div>
+<div class="back-img"></div>
 </section>
 
-<form id="upload" action="gallery-upload" method="POST" enctype="multipart/form-data">
-  <label for="i_title">Image Title:</label>
-  <input type="text" name="i_title" id="i_title">
+<section id="gallery-upload">
+  <form id="upload" action="gallery-upload" method="POST" enctype="multipart/form-data">
+    <label for="i_title">Image Title:</label>
+    <input type="text" name="i_title" id="i_title">
 
-  <label for="i_desc">Image Description:</label>
-  <input type="text" name="i_desc" id="i_desc">
+    <label for="i_desc">Image Description:</label>
+    <input type="text" name="i_desc" id="i_desc">
 
-  <label for="i_tags">Image Tags:</label>
-  <input type="text" name="i_tags" id="i_tags">
+    <label for="i_tags">Image Tags:</label>
+    <input type="text" name="i_tags" id="i_tags">
 
-    <label for="p_img">Select image to upload:</label>
-    <input type="file" name="p_img" id="p_img">
-    <input type="submit" value="Upload Image" name="submit">
-</form>
+      <label for="p_img">Select image to upload:</label>
+      <input type="file" name="p_img" id="p_img">
+      <input type="submit" value="Upload Image" name="submit">
+  </form>
+</section>

@@ -40,15 +40,19 @@ toggleSound.classList.add('muted');
 toggleSound.addEventListener('click',function(event){
   event.preventDefault();
   if(toggleSound.classList.contains('muted')){
-    toggleSound.innerHTML = "MUTE";
-    vid.muted = false;
+    toggleSound.querySelector('img').src="img/mute.png";
+      vid.muted = false;
     TweenLite.to(fade,0.5,{opacity:0,onComplete:function(){
       fade.style.display = "none";
     }});
   }else{
     vid.muted = true;
-    toggleSound.innerHTML = "UNMUTE";
+    toggleSound.querySelector('img').src="img/unmute.png";
     fade.style.display = "block";
+    var fitTexts = document.querySelectorAll('.fitText');
+    for(var o=0;o<fitTexts.length;o++){
+      fitText(fitTexts[o], 0.8 ,{ minFontSize: '32px', maxFontSize: '160px' });
+    }
     TweenLite.to(fade,0.5,{opacity:1});
   }
   toggleSound.classList.toggle('muted');

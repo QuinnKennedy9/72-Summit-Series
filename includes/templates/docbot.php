@@ -4,6 +4,7 @@
 <script src="js/CSSPlugin.js"></script>
 <script src="js/TweenLite.js"></script>
 <script src="js/TrollScroll.js"></script>
+<script src="js/external/fittext.js"></script>
 <script src="js/main.js"></script>
 <script src="js/pageSwap.js"></script>
 <script src="js/<?php echo $page;?>.js"></script>

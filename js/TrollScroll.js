@@ -1,6 +1,8 @@
 var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
 function TrollScroll(el,params){
   var element = el;
+  element.style.position = "relative";
+  element.style.top = 0;
   var styles = window.getComputedStyle(element),
     orgTop = styles.getPropertyValue('top');
   var upOrDown, speed, stop;
@@ -14,13 +16,18 @@ function TrollScroll(el,params){
   }else{
     speed = params.speed;
   }
-  if(params.direction.includes("up")){
-    upOrDown = -1;
-  }
-  if(params.direction.includes("down")){
+  if(!params.direction){
     upOrDown = 1;
+  }else{
+    if(params.direction.includes("up")){
+      upOrDown = -1;
+    }
+    if(params.direction.includes("down")){
+      upOrDown = 1;
+    }
   }
   function parallax(element){
+    console.log(orgTop);
       var scrollit = parseInt(orgTop) + upOrDown*(scrollTop*speed/100);
       if(scrollit > stop && stop!=null){
         element.style.top = stop + "px";
@@ -30,6 +37,7 @@ function TrollScroll(el,params){
   }
   window.addEventListener('scroll',function(){
     parallax(element);
+    // console.log(element);
   },false);
 }
 

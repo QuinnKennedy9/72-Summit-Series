@@ -2,13 +2,20 @@
 <section id="splash" class="">
   <h2 class="hidden">Contact Page</h2>
   <div id="fade">
-  <div class="banner">Contact Us<div class="back"></div></div>
+  <div class="banner">
+    <!-- <img id="logo" src="img/logo.png" alt=""> -->
+    <div class="spacer"></div>
+    <div class="back">
+    <div class="fitText">CONTACT US</div>
+    </div>
   <div class="callToAction">
-    <div class="tagline">Questions, Partnerships, and Events</div>
+    <h4 class="subheading">Questions, Partnerships, and Events</h4>
+    <a href="#formSection" class="scroller white arrow">SCROLL</a>
   </div>
-  <a href="#form" id="formButton" class="scroller white arrow">SCROLL</a>
-  <div class="dark-overlay"></div>
-  <div class="back-img"></div>
+</div>
+  <div class="dark-overlay darker"></div>
+</div>
+<div class="back-img"></div>
 </section>
 <section id="formSection">
   <form id="form" action="form.php" method="post" id="contactForm">
