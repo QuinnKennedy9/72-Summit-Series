@@ -271,19 +271,18 @@ footer{
   }
 }
 
-
-
-
 /*HOMEPAGE*/
 #splash{
   .back-img{
-    @include back-img('ACTION-1.jpg');
+    background-image:url(../img/linedup.jpg);
     position: absolute;
     top:0;
     left:0;
     width: 100%;
     height: 100%;
     z-index: -2;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .back-video{
     @include back-img('ACTION-1.jpg');
@@ -747,7 +746,7 @@ footer{
 }
 
 #partners{
-  background: url('../img/ACTION-5.jpg');
+  background: url('../img/history_back.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -772,6 +771,10 @@ footer{
   #partnerButton{
     margin-bottom: 6em;
   }
+}
+#contact{
+
+
 }
 
 @media only screen and (min-width:40em){

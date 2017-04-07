@@ -8,7 +8,7 @@
     <a href="#partners" id="partners2" class="scroller white arrow">SCROLL</a>
   </div>
   <div class="dark-overlay"></div>
-  <div class="back-img"></div>
+  <div class="back-img" ></div>
 </section>
 <section id="partners">
 <div id="upperPartner">
