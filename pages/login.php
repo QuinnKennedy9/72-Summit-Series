@@ -62,7 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <br><br><br><br>
           </form>
       </div>
-        <div class="dark-overlay darker"></div>
       </div>
       <div class="back-img"></div>
       </section>

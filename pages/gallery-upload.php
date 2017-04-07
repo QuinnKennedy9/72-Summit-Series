@@ -81,7 +81,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <a id="viewMore" href="#gallery-upload" class="scroller white arrow">Scroll</a>
   </div>
 </div>
-  <div class="dark-overlay darker"></div>
 </div>
 <div class="back-img"></div>
 </section>

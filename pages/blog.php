@@ -16,7 +16,6 @@ if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
     <a id="viewMore" href="#gallery" class="scroller white button">Read</a>
   </div>
 </div>
-  <div class="dark-overlay darker"></div>
 </div>
 <div class="back-img"></div>
 </section>

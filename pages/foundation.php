@@ -12,7 +12,6 @@
     <a href="#portal" class="scroller white arrow">SCROLL</a>
   </div>
 </div>
-  <div class="dark-overlay darker"></div>
 </div>
 <div class="back-img"></div>
 </section>

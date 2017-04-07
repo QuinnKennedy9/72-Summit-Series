@@ -1027,17 +1027,20 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
+  #formSection form {
+    width: 90%;
+    max-width: 30em;
+    margin: 0 auto;
+    display: block; }
   #formSection label {
     font-family: "Open Sans";
     display: block;
-    font-size: 2em;
-    margin-left: 15em; }
+    font-size: 2em; }
   #formSection .options {
     font-size: 1em;
     display: inline;
     margin-left: .5em; }
   #formSection input {
-    margin-left: 30em;
     color: #fff;
     margin-top: 1em; }
     #formSection input:not([type="submit"]) {
@@ -1049,15 +1052,14 @@ footer {
         border: medium solid #fff; }
     #formSection input[type="submit"] {
       margin-top: 1.5em;
-      margin-left: 40em;
       margin-bottom: 6em;
       color: #fff;
       padding: 0.5em 1.75em;
       background: #cc1515;
       border: medium solid #aa0e0e; }
-  #formSection #message {
-    display: block;
-    height: 10em; }
+  #formSection textarea {
+    width: 100%;
+    display: block; }
 
 #portal {
   background: url("../img/history_back.jpg");

@@ -12,14 +12,12 @@ $page = 'team';
     </div>
   <div class="callToAction">
     <h4 class="subheading">TOGETHER EVERY MINUTE</h4>
-    <a href="#timeline" class="scroller white arrow">SCROLL</a>
+    <a href="#team" class="scroller white arrow">SCROLL</a>
   </div>
 </div>
-  <div class="dark-overlay darker"></div>
 </div>
 <div class="back-img"></div>
 </section>
 
-<section id="timeline">
-  <div class="placeholder"></div>
+<section id="team">
 </section>
