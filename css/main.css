@@ -370,6 +370,9 @@ body {
 .hidden {
   display: none !important; }
 
+.invisible {
+  opacity: 0.0 !important; }
+
 .clearfix:after {
   content: '';
   display: block;
@@ -406,8 +409,8 @@ header {
     display: none;
     position: absolute;
     color: #cc1515;
-    font-family: "pop_warner", "opensans-regular", "sans serif";
-    font-weight: normal;
+    font-family: "Teko", "Open Sans", sans-serif;
+    font-weight: 700;
     z-index: 200;
     left: 4em;
     line-height: 0.5em; }
@@ -513,7 +516,7 @@ header {
         margin: 0 auto;
         max-width: 20em; }
         header #mainNav ul li a {
-          font-family: "pop_warner", "opensans-regular", "sans serif";
+          font-family: "Teko", "Open Sans", sans-serif;
           text-transform: uppercase;
           font-weight: 100;
           font-size: 1.5em;
@@ -596,26 +599,45 @@ footer {
     #splash .back-video video.play {
       display: block; }
   #splash .banner {
-    position: absolute;
-    text-shadow: 0.4rem 0.4rem 0.2rem rgba(0, 0, 0, 0.5);
-    font-family: "pop_warner", "opensans-regular", "sans serif";
+    position: relative;
     color: #fff;
     box-sizing: border-box;
-    font-size: 3rem;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
     z-index: 3;
-    top: 30%; }
+    margin-top: 8em; }
+    #splash .banner #logo {
+      max-width: 10rem;
+      width: 50%;
+      display: block;
+      margin: 0 auto; }
+    #splash .banner .fitText {
+      font-family: "Teko", "Open Sans", sans-serif;
+      text-shadow: 0.4rem 0.4rem 0.2rem rgba(0, 0, 0, 0.5);
+      margin-top: 0.5em;
+      padding-top: 0.1em;
+      line-height: 0.2em; }
     #splash .banner .back {
       background-color: #cc1515;
-      height: 40%;
       width: 100%;
-      box-sizing: border-box;
-      position: absolute;
-      left: 0;
-      top: 30%;
-      z-index: -1; }
+      box-sizing: border-box; }
+    #splash .banner .callToAction {
+      margin: 0 auto;
+      margin-top: 2em;
+      width: 80%;
+      position: relative;
+      z-index: 90;
+      font-size: 0.5em; }
+      #splash .banner .callToAction .tagline {
+        text-align: center;
+        border-bottom: medium solid #cc1515;
+        font-weight: 700;
+        display: block;
+        max-width: 22em;
+        margin: 0 auto;
+        padding: 0.2em;
+        margin-bottom: 1em; }
   #splash .subheading {
     text-align: center;
     width: 100%;
@@ -657,22 +679,6 @@ footer {
   position: relative;
   top: 30em;
   z-index: 10; }
-
-.callToAction {
-  margin: 0 auto;
-  margin-top: 20em;
-  width: 80%;
-  position: relative;
-  z-index: 90; }
-  .callToAction .tagline {
-    text-align: center;
-    border-bottom: medium solid #cc1515;
-    font-weight: 700;
-    display: block;
-    max-width: 22em;
-    margin: 0 auto;
-    padding: 0.2em;
-    margin-bottom: 1em; }
 
 .arrow {
   text-decoration: none;
@@ -993,14 +999,6 @@ footer {
       header #mainNav ul li a:hover:after {
         width: 100%; }
 
-  .callToAction {
-    margin-top: 24em; }
-
-  #splash .banner {
-    font-size: 8rem; }
-  #splash .subheading {
-    font-size: 1.5rem;
-    top: 24rem; }
   #splash .back-video video {
     display: block; }
 
@@ -1076,3 +1074,10 @@ footer {
                 border-bottom: medium solid #fff;
                 top: 50%;
                 position: absolute; } }
+@media only screen and (min-width: 60em) {
+  #splash .banner {
+    margin-top: 12em; }
+    #splash .banner #logo {
+      max-width: 14rem; }
+    #splash .banner .callToAction {
+      font-size: 2em; } }

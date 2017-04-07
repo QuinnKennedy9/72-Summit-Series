@@ -18,6 +18,13 @@
     }
   }
 
+function fitTheTexts(){
+  var fitTexts = document.querySelectorAll('.fitText');
+  for(var o=0;o<fitTexts.length;o++){
+    fitText(fitTexts[o], 0.8 ,{ minFontSize: '32px', maxFontSize: '160px' });
+  }
+}
+
   function ajaxPage(pageObject){
     var xhttp = new XMLHttpRequest();
      xhttp.onreadystatechange = function() {
@@ -32,6 +39,7 @@
           var script = document.createElement('script');
           script.src = "js/" + pageObject.name + ".js";
           document.head.appendChild(script);
+          fitTheTexts();
         }})
       }
      };
@@ -95,4 +103,5 @@ hamburger.addEventListener('click',function(e){
 },false);
 assignLinks();
 findScollLinks();
+fitTheTexts();
 })();
