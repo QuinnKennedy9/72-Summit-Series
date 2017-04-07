@@ -987,7 +987,6 @@ footer {
   background-position: center; }
 
 #partners {
-
   position: relative;
   background: url("../img/ACTION-5.jpg");
   background-repeat: no-repeat;
@@ -1145,8 +1144,6 @@ footer {
                 border-bottom: medium solid #fff;
                 top: 50%;
                 position: absolute; } }
-
 @media only screen and (min-width: 60em) {
   #splash .banner #logo {
     max-width: 12rem; } }
-
