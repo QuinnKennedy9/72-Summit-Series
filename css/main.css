@@ -568,16 +568,15 @@ footer {
   overflow: hidden;
   height: 100vh; }
   #splash .back-img {
-    background: url("../img/ACTION-1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-image: url(../img/linedup.jpg);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -2; }
+    z-index: -2;
+    background-repeat: no-repeat;
+    background-size: cover; }
   #splash .back-video {
     background: url("../img/ACTION-1.jpg");
     background-repeat: no-repeat;
@@ -988,6 +987,7 @@ footer {
   background-position: center; }
 
 #partners {
+
   position: relative;
   background: url("../img/ACTION-5.jpg");
   background-repeat: no-repeat;
@@ -1013,6 +1013,50 @@ footer {
     box-shadow: 0px 4px 42px -8px white; }
   #partners #partnerButton {
     margin-bottom: 6em; }
+
+#formSection {
+  padding-top: 5em;
+  background: url("../img/history_back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  #formSection label {
+    font-family: "Open Sans";
+    display: block;
+    font-size: 2em;
+    margin-left: 15em; }
+  #formSection .options {
+    font-size: 1em;
+    display: inline;
+    margin-left: .5em; }
+  #formSection input {
+    margin-left: 30em;
+    color: #fff;
+    margin-top: 1em; }
+    #formSection input:not([type="submit"]) {
+      border: medium solid #e6e6e6;
+      background: transparent;
+      padding: 0.5em 0.75em; }
+      #formSection input:not([type="submit"]):focus {
+        outline: 0;
+        border: medium solid #fff; }
+    #formSection input[type="submit"] {
+      margin-top: 1.5em;
+      margin-left: 40em;
+      margin-bottom: 6em;
+      color: #fff;
+      padding: 0.5em 1.75em;
+      background: #cc1515;
+      border: medium solid #aa0e0e; }
+  #formSection #message {
+    display: block;
+    height: 10em; }
+
+#portal {
+  background: url("../img/history_back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
 
 @media only screen and (min-width: 40em) {
   header h1 {
@@ -1101,6 +1145,8 @@ footer {
                 border-bottom: medium solid #fff;
                 top: 50%;
                 position: absolute; } }
+
 @media only screen and (min-width: 60em) {
   #splash .banner #logo {
     max-width: 12rem; } }
+

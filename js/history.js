@@ -52,6 +52,15 @@ var filler = {
       "text":"text! text, text text."
     }
 }
+var bphotos = ["ACTION-5.jpg", "ACTION-9.jpg", "action-12.jpg", "linedup.jpg"];
+var rand = bphotos[Math.floor(Math.random() * bphotos.length)];
+var background = document.querySelector(".back-img");
+
+function randBack(){
+  document.querySelector(".back-img").style.backgroundImage="url(img/"+rand+")";
+  console.log(background.src)
+}
+
 function expandEvent(it){
   var offsetEl = it.parentNode.offsetTop;
   var offsetParent = it.parentNode.parentNode.parentNode.offsetTop;
@@ -135,4 +144,6 @@ for(link of innerLevelEvents){
     loadContent(it);
   },false);
 }
+window.addEventListener("load",randBack, false);
+
 })();

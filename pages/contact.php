@@ -18,22 +18,14 @@
 <div class="back-img"></div>
 </section>
 <section id="formSection">
-  <form id="form" action="form.php" method="post">
-    <fieldset>
-      <label for="name">Name</label>
+  <form id="form" action="form.php" method="post" id="contactForm">
+      <label for="name" id="name">Name</label>
         <input type="text" required id="name" size="30" placeholder="Please Enter Your Name">
-      <label for="email">Email</label>
+      <label for="email" class="label">Email</label>
         <input type="email" required id="email" size="30" placeholder="Please Enter Your Email">
-      <label for="subject"id="subjectLabel">Subject:</label>
-        <label >Questions</label>
-        <input type="radio" name="subject" size="30">
-        <label >Partnerships</label>
-        <input type="radio" name="subject" size="30">
-        <label >Events</label>
-        <input type="radio" name="subject" size="30">
-        <input type="textarea" required id="message" size="60" placeholder="Enter Your Message">
+      <label for="subject"id="subjectLabel" class="label" >Subject</label>
+        <input type="text" name="subject" required size="30" placeholder="Please Enter The Subject">
+        <input type="textarea" rows=4 columns=50 required id="message" size="60" placeholder="Enter Your Message">
         <input type="submit" id="submit" value="Submit">
-    </fieldset>
   </form>
-
 </section>
