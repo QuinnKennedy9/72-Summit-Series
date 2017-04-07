@@ -510,10 +510,11 @@ footer{
   z-index: 1;
   padding-bottom:4em;
   .inner{
-    margin:0 auto;
-    border-top: thin solid #fff;
-    padding-top:2em;
+    max-width: 50em;
+    box-sizing: border-box;
+    padding-top:4em;
     text-align: center;
+    margin:0 auto;
   }
   .image{
     display: inline-block;
@@ -521,19 +522,19 @@ footer{
     margin:1em;
     // padding:1em;
     box-sizing: border-box;
-    width:80%;
-    max-width: 20em;
+    // width:80%;
     img{
       width:100%;
-      // margin:1em;
+      max-width:20em;
     }
     .imageHeader{
       position: absolute;
       width:100%;
       left:0;
-      bottom:1em;
+      bottom:5%;
       background: transparentize($red,0.2);
       color:$white;
+      margin:0;
       padding:0.5em;
       text-align:center;
       box-sizing: border-box;
@@ -1072,20 +1073,9 @@ footer{
     }
   }
   #gallery{
-    .inner{
-      text-align: center;
-    }
     #nothing{
       padding:4em;
     }
-    .image{
-      position: relative;
-      display: inline-block;
-      margin:1em;
-      box-sizing: border-box;
-      width:100%;
-      .img{
-      }
       .imageHeader{
         position: absolute;
         width:100%;
@@ -1098,7 +1088,6 @@ footer{
         box-sizing: border-box;
         transition: all ease 0.5s;
       }
-    }
   }
   #timeline{
     padding:2em;

@@ -9,7 +9,7 @@ if(screenWidth>=(16*40)){
   if(!vid.classList.contains('play')){
     vid.classList.add('play');
     vid.style.display = "block";
-    vid.src ="vid/hockey.mp4";
+    vid.src ="vid/hockey-final.mp4";
     vid.play();
     vid.parentNode.style.background = "#000";
     console.log("show video");

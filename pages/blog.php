@@ -46,7 +46,7 @@ if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
         echo '<div class="image">';
-        if(isset($loggedIn) && $loggedIn == "true"){
+        if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
           echo '<a class="delete" href="blog-delete?id='.$row['id'].'">X</a>';
         }
         echo '<h3 class="imageHeader">'.$row['p_title'].'</h3><img src="'.$row['p_img_src'].'" alt="'.$row['p_content'].'"><p>'.$row['p_content'].'</p></div>';
@@ -57,7 +57,7 @@ if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
     }
      ?>
 
-<div class="buttons">
+<div class="buttons hidden">
   <?php if($currentPage>$limit){echo '<a href="gallery?page=1" class="gallajax pageButton">First Page</a>';}?>
   <?php if($currentPage>1){echo '<a href="gallery?page='.($currentPage-1).'" class="gallajax pageButton">Prev</a>';}?>
   <?php for($i=$currentPage+1;$i<5;$i++):?>
@@ -65,11 +65,5 @@ if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
   <?php endfor;?>
   <?php if($noResults>=4){echo '<a href="gallery?page='. ($currentPage+1). '" class="gallajax pageButton">Next</a>';}?>
 </div>
-<?php
-if(isset($loggedIn) && $loggedIn == "true"){
-  echo '<a id="gallery-upload" class="white button" href="gallery-upload">Upload</a>';
-}
- ?>
-
 </div>
 </section>
