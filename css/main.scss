@@ -560,6 +560,7 @@ footer{
   }
 }
 
+
 #timeline{
   position: relative;
   @include back-img('history_back.jpg');
@@ -832,11 +833,16 @@ footer{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  form{
+    width: 90%;
+    max-width: 30em;
+    margin: 0 auto;
+    display: block;
+  }
   label{
     font-family:$font-reg;
     display: block;
     font-size: 2em;
-    margin-left: 15em;
   }
   .options{
     font-size: 1em;
@@ -844,7 +850,6 @@ footer{
     margin-left: .5em;
   }
   input{
-    margin-left: 30em;
     color:$white;
     margin-top: 1em;
     &:not([type="submit"]){
@@ -858,7 +863,6 @@ footer{
     }
     &[type="submit"]{
       margin-top: 1.5em;
-      margin-left: 40em;
       margin-bottom:6em;
       color:$white;
       padding:0.5em 1.75em;
@@ -866,10 +870,11 @@ footer{
       border:medium solid $red-dark;
     }
   }
-  #message{
+  textarea{
+    width:100%;
     display: block;
-    height:10em;
   }
+
 
 
 }

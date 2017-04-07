@@ -13,7 +13,6 @@
     <a id="viewMore" href="#gallery" class="scroller white button">View</a>
   </div>
 </div>
-  <div class="dark-overlay darker"></div>
 </div>
 <div class="back-img"></div>
 </section>

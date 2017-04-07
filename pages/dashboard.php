@@ -18,7 +18,6 @@ if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
       <!-- <a href="gallery-upload">Upload to Gallery</a> -->
     </div>
 </div>
-  <div class="dark-overlay darker"></div>
 </div>
 <div class="back-img"></div>
 </section>
