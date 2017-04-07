@@ -745,7 +745,68 @@ footer {
     .button.white:hover {
       background-color: rgba(255, 255, 255, 0.2); }
 
+#blog {
+  position: relative;
+  background: url("../img/ACTION-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  padding: 1em;
+  min-height: 44em; }
+  #blog .inner {
+    box-sizing: border-box;
+    max-width: 60em;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 4em; }
+    #blog .inner .post {
+      display: inline-block;
+      margin: 1em;
+      max-width: 20em;
+      position: relative;
+      background: #cc1515;
+      max-height: 20em;
+      padding: 2em;
+      box-sizing: border-box; }
+      #blog .inner .post .delete {
+        display: none; }
+      #blog .inner .post .postHeader {
+        position: absolute;
+        top: 35%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        opacity: 1.0;
+        transition: all ease 1s;
+        background: rgba(170, 14, 14, 0.5);
+        padding: 1em;
+        box-sizing: border-box; }
+      #blog .inner .post img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+      #blog .inner .post .content {
+        margin: 0;
+        display: block;
+        padding: 2em;
+        box-sizing: border-box;
+        overflow-y: hidden;
+        text-overflow: ellipsis;
+        opacity: 0.0;
+        overflow-y: hidden;
+        height: 15em;
+        transition: all ease 1s; }
+      #blog .inner .post:hover .content {
+        opacity: 1.0; }
+      #blog .inner .post:hover .postHeader {
+        opacity: 0.0; }
+
 #gallery {
+  box-sizing: border-box;
   position: relative;
   min-height: 44em;
   padding: 1em;
@@ -756,26 +817,29 @@ footer {
   z-index: 1;
   padding-bottom: 4em; }
   #gallery .inner {
-    margin: 0 auto;
-    border-top: thin solid #fff;
-    padding-top: 2em;
-    text-align: center; }
+    max-width: 50em;
+    box-sizing: border-box;
+    padding-top: 4em;
+    text-align: center;
+    margin: 0 auto; }
   #gallery .image {
     display: inline-block;
     position: relative;
     margin: 1em;
-    box-sizing: border-box;
-    width: 80%;
-    max-width: 20em; }
+    box-sizing: border-box; }
     #gallery .image img {
-      width: 100%; }
+      width: auto;
+      height: auto;
+      max-width: 20em;
+      max-height: 14em; }
     #gallery .image .imageHeader {
       position: absolute;
       width: 100%;
       left: 0;
-      bottom: 1em;
+      bottom: 5%;
       background: rgba(204, 21, 21, 0.8);
       color: #fff;
+      margin: 0;
       padding: 0.5em;
       text-align: center;
       box-sizing: border-box;
@@ -979,6 +1043,60 @@ footer {
   background-size: cover;
   background-position: center; }
 
+#team {
+  position: relative;
+  background: url("../img/ACTION-5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  #team .inner {
+    padding: 4em 0;
+    max-width: 80em;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+    text-align: center; }
+    #team .inner .player {
+      margin: 1.5em 2em;
+      width: 90%;
+      max-width: 30em;
+      display: inline-block;
+      background: #cc1515;
+      box-sizing: border-box; }
+      #team .inner .player .left {
+        box-sizing: border-box;
+        height: 100%;
+        float: left;
+        width: 40%;
+        position: relative; }
+        #team .inner .player .left img {
+          width: 100%; }
+        #team .inner .player .left .num {
+          font-family: "Teko", "Open Sans", sans-serif;
+          font-size: 2rem;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          right: 0;
+          text-align: center;
+          background: rgba(170, 14, 14, 0.5); }
+      #team .inner .player .right {
+        box-sizing: border-box;
+        float: left;
+        width: 60%; }
+        #team .inner .player .right .name {
+          font-family: "Teko", "Open Sans", sans-serif;
+          font-size: 2rem;
+          padding: 0.5em 0;
+          text-align: center;
+          background: #aa0e0e;
+          display: block;
+          text-transform: uppercase;
+          width: 100%; }
+        #team .inner .player .right .description {
+          padding: 0.5em;
+          display: block; }
+
 #partners {
   position: relative;
   background: url("../img/ACTION-5.jpg");
@@ -1129,27 +1247,19 @@ footer {
   #splash .back-video video {
     display: block; }
 
-  #gallery .inner {
-    text-align: center; }
   #gallery #nothing {
     padding: 4em; }
-  #gallery .image {
-    position: relative;
-    display: inline-block;
-    margin: 1em;
+  #gallery .imageHeader {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 1em;
+    background: rgba(204, 21, 21, 0.8);
+    color: #fff;
+    padding: 0.5em;
+    text-align: center;
     box-sizing: border-box;
-    width: 100%; }
-    #gallery .image .imageHeader {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      bottom: 1em;
-      background: rgba(204, 21, 21, 0.8);
-      color: #fff;
-      padding: 0.5em;
-      text-align: center;
-      box-sizing: border-box;
-      transition: all ease 0.5s; }
+    transition: all ease 0.5s; }
 
   #timeline {
     padding: 2em; }

@@ -1,7 +1,7 @@
 <footer>
 <div class="left">
   <?php
-  if($loggedIn == "true"){
+  if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
     echo '<a id="dashboard" class="ajax" href="dashboard">Dashboard</a>';
     echo '<a id="logout" href="logout">Logout</a>';
   }else{
