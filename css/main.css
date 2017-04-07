@@ -1006,17 +1006,17 @@ footer {
     z-index: 1; }
   #partners #upperPartner {
     padding-top: 5em;
-    margin-left: 32%; }
+    margin-left: 10%; }
   #partners #lowerPartner {
     margin-top: 1em;
-    margin-left: 32%;
+    margin-left: 10%;
     margin-bottom: 5em; }
   #partners .partnerImage {
     border-radius: 1em;
     margin-bottom: 2em;
-    display: block;
-    height: 8em;
-    width: 8em;
+    display: inline;
+    height: 5em;
+    width: 5em;
     margin-left: .5em;
     margin-right: .5em;
     -webkit-box-shadow: 0px 4px 42px -8px white;
@@ -1077,7 +1077,7 @@ footer {
     font-size: 1.2em;
     padding-top: 5em; }
   #portal #question {
-    margin-left: 3em;
+    margin-left: 2.5em;
     width: 80%;
     font-size: 1em;
     padding-top: 1.25em;
@@ -1089,23 +1089,60 @@ footer {
     margin-bottom: 1em; }
   #portal #portalContent {
     padding: 2em 2em 2em 2em;
-    width: 70%;
+    width: 80%;
     margin: auto;
     background: linear-gradient(red, #aa0e0e);
     border-radius: 1em;
-    height: 38em; }
+    height: 28em;
+    margin-top: 2em; }
+  #portal #contentText {
+    height: 12em;
+    overflow: scroll; }
   #portal h3 {
-    margin-left: 4em;
-    font-size: 1.5em; }
+    margin-left: 1em;
+    font-size: 1em;
+    display: inline; }
+  #portal #education {
+    margin-left: 3em; }
 
 @media only screen and (min-width: 40em) {
+  #portal #intro {
+    width: 70%;
+    margin-left: 3em;
+    font-size: 1.2em;
+    padding-top: 5em; }
+  #portal #question {
+    margin-left: 2.5em;
+    width: 80%;
+    font-size: 1.6em;
+    padding-top: 1.25em;
+    border-bottom: medium solid #cc1515; }
+  #portal #portalImage {
+    width: 95%;
+    height: auto;
+    border-radius: 1em;
+    margin-bottom: 1em; }
+  #portal #portalContent {
+    padding: 2em 2em 2em 2em;
+    width: 80%;
+    margin: auto;
+    background: linear-gradient(red, #aa0e0e);
+    border-radius: 1em;
+    height: 35em;
+    margin-top: 2em; }
+  #portal #contentText {
+    height: 14em;
+    overflow: hidden; }
+  #portal #education {
+    margin-left: 4em; }
+
   h3 {
-    float: left;
+    display: inline;
     margin-left: 1.5em;
     font-size: 2em;
     position: relative;
-    margin-left: 1.5em !important;
-    font-size: 2em !important; }
+    margin-left: 1.5em;
+    font-size: 4em; }
 
   .partnerImage {
     display: inline !important;
@@ -1212,8 +1249,11 @@ footer {
     font-size: 1.5em !important;
     padding-top: 5em !important; }
 
+  #education {
+    margin-left: 13em !important; }
+
   h3 {
-    margin-left: 1.5em !important;
+    margin-left: 1.5em;
     font-size: 2em !important; }
 
   h3:before {
@@ -1235,9 +1275,6 @@ footer {
     -webkit-transform: scaleX(1);
     transform: scaleX(1); }
 
-  #education {
-    margin-left: 12.25em !important; }
-
   #question {
     margin-left: 20em !important;
     width: 34% !important;
@@ -1251,10 +1288,10 @@ footer {
     margin-bottom: 1em !important; }
 
   #portalContent {
-    clear: left !important;
     padding: 2em 2em 2em 2em !important;
     width: 45% !important;
     margin: auto !important;
+    margin-top: 2em !important;
     background: linear-gradient(red, #aa0e0e);
     border-radius: 1em;
     height: 38em; }
