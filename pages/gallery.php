@@ -17,6 +17,7 @@
 <div class="back-img"></div>
 </section>
 <section id="gallery" class="dark-overlay">
+  <h2 class="hidden">Gallery Contents</h2>
   <!-- <div class="dark-overlay"></div> -->
   <div class="inner clearfix">
     <!-- INSERT GALLERY IMAGES -->

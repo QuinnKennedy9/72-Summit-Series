@@ -17,6 +17,7 @@
 <div class="back-img"></div>
 </section>
 <section id="formSection">
+  <h2 class="hidden">Contact Form</h2>
   <form id="form" action="form.php" method="post" id="contactForm">
       <label for="name" id="name">Name</label>
         <input type="text" required id="name" size="30" placeholder="Please Enter Your Name">

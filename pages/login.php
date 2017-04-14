@@ -65,4 +65,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
       <div class="back-img"></div>
       </section>
-      <section></section>
+      <section><h2 class="hidden">Placeholder Section</h2></section>

@@ -21,6 +21,7 @@ if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === "true"){
 </section>
 
 <section id="blog" class="dark-overlay">
+  <h2 class="hidden">Current Articles</h2>
   <!-- <div class="dark-overlay"></div> -->
   <div class="inner clearfix">
     <!-- INSERT GALLERY IMAGES -->

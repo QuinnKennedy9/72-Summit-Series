@@ -60,6 +60,7 @@ $teamMembers = [
 
 </section>
 <section id="team">
+  <h2 class="hidden">Team Members</h2>
   <div class="inner">
   <?php foreach($teamMembers as $player):?>
     <div class="player clearfix">

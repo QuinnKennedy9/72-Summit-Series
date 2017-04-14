@@ -18,6 +18,7 @@
 </section>
 
 <section id="partners" class="dark-overlay">
+  <h2 class="hidden">Partner List</h2>
   <div class="inner">
     <a href="http://www.amusic.mu/" target="_blank"><img src="img/amusic.jpeg" alt="A Music" class="partnerImage"></a>
     <a href="https://www.aircanada.com" target="_blank"><img src="img/ac.png" alt="Air Canada" class="partnerImage"></a>
